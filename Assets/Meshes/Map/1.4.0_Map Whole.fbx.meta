@@ -3,7 +3,37 @@ guid: 38585ca6325f2c04887a9b6ceed9c472
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 5f8ce291a9126414e9ce04ca212dca70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Item
+    second: {fileID: 2100000, guid: 0a916591b0c98654c9efa9211040fb5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pulse
+    second: {fileID: 2100000, guid: 19ff4df91ac9c384288170d697e7ba8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road
+    second: {fileID: 2100000, guid: 29191a6ba11cc1544b625ecfd4029a46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Road Accent
+    second: {fileID: 2100000, guid: 7b53f9189cd1d05459c0158c4ed42949, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sea
+    second: {fileID: 2100000, guid: 7f4ce7701f82bf142b31655be75db802, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
