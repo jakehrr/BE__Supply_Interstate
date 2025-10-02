@@ -68,10 +68,12 @@ public class CameraRotate : MonoBehaviour
 
     private void UserInputCameraRotation()
     {
-        if (Input.GetMouseButton(0))
+        if (playerInputActions.Player.Attack.ReadValue<float>() == 1)
         {
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+            Vector2 mouseInput = playerInputActions.Player.Look.ReadValue<Vector2>();
+
+            float mouseX = mouseInput.x * mouseSensitivity;
+            float mouseY = mouseInput.y * mouseSensitivity;
 
             XRotation += mouseX;
             YRotation += mouseY;
