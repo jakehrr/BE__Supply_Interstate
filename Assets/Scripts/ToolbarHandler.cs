@@ -6,6 +6,8 @@ public class ToolbarHandler : MonoBehaviour
     public GameObject[] selectedGlow;
 
     [SerializeField] private GameObject exploreText;
+    [SerializeField] private GameObject exploreButton;
+    [SerializeField] private GameObject mapButton;
 
     private Animator toolbarAnimator;
     private int lastSelectedIndex = -1; 
@@ -17,9 +19,9 @@ public class ToolbarHandler : MonoBehaviour
 
     public void HandleButtonPress(int index)
     {
-        bool isSameButton = (index == lastSelectedIndex);
+        bool sameButtonPressed = (index == lastSelectedIndex);
 
-        if (isSameButton)
+        if (sameButtonPressed)
         {
             CloseToolbar();
 
@@ -43,12 +45,16 @@ public class ToolbarHandler : MonoBehaviour
     public void OpenToolbar()
     {
         toolbarAnimator.SetBool("OpenToolbar", true);
-        exploreText.SetActive(true);
+        exploreText.SetActive(false);
+        exploreButton.SetActive(true);
+        mapButton.SetActive(true);
     }
 
     public void CloseToolbar()
     {
         toolbarAnimator.SetBool("OpenToolbar", false);
-        exploreText.SetActive(false);
+        exploreText.SetActive(true);
+        exploreButton.SetActive(false);
+        mapButton.SetActive(false);
     }
 }

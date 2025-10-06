@@ -4,7 +4,7 @@ public class CameraPan : MonoBehaviour
 {
     [Header("Pan Settings")]
     [SerializeField] private float panSpeed = 2f;
-    [SerializeField] private float smoothTime = 0.15f; // lower = snappier, higher = smoother
+    [SerializeField] private float smoothTime = 0.15f;
     [SerializeField] private Vector2 xBounds = new Vector2(-50f, 50f);
     [SerializeField] private Vector2 yBounds = new Vector2(-30f, 30f);
     [SerializeField] private Vector2 zBounds = new Vector2(-30f, 30f);
