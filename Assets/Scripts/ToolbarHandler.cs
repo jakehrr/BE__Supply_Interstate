@@ -57,4 +57,14 @@ public class ToolbarHandler : MonoBehaviour
         exploreButton.SetActive(false);
         mapButton.SetActive(false);
     }
+
+    public void Explore()
+    {
+        foreach (GameObject g in selectedGlow)
+            g.SetActive(false);
+
+        lastSelectedIndex = -1;
+
+        toolbarAnimator.SetBool("Explore", true);
+    }
 }
