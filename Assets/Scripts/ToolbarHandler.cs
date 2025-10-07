@@ -5,8 +5,11 @@ public class ToolbarHandler : MonoBehaviour
 {
     public GameObject[] selectedGlow;
 
+    [Header("Main UI Elements")]
+    [SerializeField] private GameObject[] toolbarButtons;
     [SerializeField] private GameObject exploreText;
     [SerializeField] private GameObject exploreButton;
+    [SerializeField] private GameObject exploreWindow;
     [SerializeField] private GameObject mapButton;
 
     private Animator toolbarAnimator;
@@ -77,11 +80,20 @@ public class ToolbarHandler : MonoBehaviour
 
     public void Explore()
     {
+        // Deactivate all irrelevant UI elements.
         foreach (GameObject g in selectedGlow)
             g.SetActive(false);
 
+        foreach(GameObject g in toolbarButtons) 
+            g.SetActive(false);
+
+        exploreButton.SetActive(false);
+
+        // Reset the selection glow objects.
         lastSelectedIndex = -1;
 
+        // Display the explore scrolling text
+        exploreWindow.SetActive(true);
         toolbarAnimator.SetBool("Explore", true);
     }
 }
