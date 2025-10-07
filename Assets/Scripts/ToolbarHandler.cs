@@ -38,8 +38,6 @@ public class ToolbarHandler : MonoBehaviour
         if (sameButtonPressed)
         {
             CloseToolbar();
-
-        
         }
         else
         {
@@ -96,11 +94,6 @@ public class ToolbarHandler : MonoBehaviour
         foreach (GameObject g in selectedGlow)
             g.SetActive(false);
 
-        foreach(GameObject g in toolbarButtons) 
-            g.SetActive(false);
-
-        exploreButton.SetActive(false);
-
         // Reset the selection glow objects.
         lastSelectedIndex = -1;
 
@@ -108,6 +101,7 @@ public class ToolbarHandler : MonoBehaviour
         exploreWindow.SetActive(true);
         toolbarAnimator.SetBool("Explore", true);
         toolbarAnimator.SetBool("OpenToolbar", false);
+        StartCoroutine(ActivateExplorePage());
 
         // Change booleans to alter what animation plays re-opening the toolbar when triggered.
         exploreActive = true;
@@ -116,29 +110,35 @@ public class ToolbarHandler : MonoBehaviour
 
     public void MapButton() // TODO
     {
-        if (toolbarActive && !exploreActive) // Activates when the toolbar is open.
+        if (exploreActive)
+        {
+            toolbarAnimator.SetBool("Explore", false);
+            StartCoroutine(ExploreScrollDeactivation());
+        }
+        else if (toolbarActive)
         {
             CloseToolbar();
         }
-        else if (exploreActive && !toolbarActive) // Activates when the explore page is open.
-        {
-            // Begin Transition Out.
-            foreach (GameObject g in toolbarButtons)
-                g.SetActive(true);
+    }
 
-            toolbarAnimator.SetBool("Explore", false);
-            StartCoroutine(ExploreScrollDeactivation());
+    private IEnumerator ActivateExplorePage()
+    {
+        yield return new WaitForSeconds(0.75f);
 
-            // Set us back to default state.
-            toolbarActive = true;
-            exploreActive = false;
-        }
+        exploreButton.SetActive(false);
+        foreach(GameObject g in toolbarButtons)
+            g.SetActive(false);
     }
 
     private IEnumerator ExploreScrollDeactivation()
     {
-        yield return new WaitForSeconds(0.19f);
+        yield return new WaitForSeconds(0.25f);
+        foreach(GameObject g in toolbarButtons)
+            g.SetActive(true);
+
         exploreWindow.SetActive(false);
         mapButton.SetActive(false);
+        toolbarActive = true;
+        exploreActive = false;
     }
 }

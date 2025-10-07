@@ -302,8 +302,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1315,7 +1315,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0, y: 0.000045776367}
-  m_SizeDelta: {x: 662.438, y: 306.1778}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401252136
 MonoBehaviour:
@@ -3303,11 +3303,11 @@ RectTransform:
   - {fileID: 256535052}
   - {fileID: 1378320924}
   - {fileID: 2025747562}
-  m_Father: {fileID: 2082284992}
+  m_Father: {fileID: 1510104137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.21939999, y: -298.318}
+  m_AnchoredPosition: {x: 0.5572906, y: -61.317993}
   m_SizeDelta: {x: 598.035, y: 114.5923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395111705
@@ -3538,6 +3538,7 @@ RectTransform:
   - {fileID: 401252135}
   - {fileID: 79165681}
   - {fileID: 1582651336}
+  - {fileID: 1395111704}
   m_Father: {fileID: 2082284992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3614,8 +3615,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5000,9 +5001,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 464945170}
-  - {fileID: 1510104137}
-  - {fileID: 1395111704}
   - {fileID: 644131814}
+  - {fileID: 1510104137}
   - {fileID: 521449542}
   - {fileID: 1299605716}
   - {fileID: 1269533133}
@@ -5057,7 +5057,7 @@ Animator:
   m_GameObject: {fileID: 2082284988}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 14375d0627daf45489309f6467a7d905, type: 2}
+  m_Controller: {fileID: 9100000, guid: 673f46914cbd1794e979a0b63fe99932, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
