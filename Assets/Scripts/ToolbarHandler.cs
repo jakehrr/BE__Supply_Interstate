@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +14,11 @@ public class ToolbarHandler : MonoBehaviour
     [SerializeField] private GameObject exploreWindow;
     [SerializeField] private GameObject mapButton;
 
+    [Header("Toolbar States")]
+    [SerializeField] private bool toolbarActive = true;
+    [SerializeField] private bool exploreActive = false;
+
+    [Header("Private References")]
     private Animator toolbarAnimator;
     private int lastSelectedIndex = -1; 
 
@@ -32,10 +39,7 @@ public class ToolbarHandler : MonoBehaviour
         {
             CloseToolbar();
 
-            foreach (GameObject g in selectedGlow)
-                g.SetActive(false);
-
-            lastSelectedIndex = -1; 
+        
         }
         else
         {
@@ -68,6 +72,11 @@ public class ToolbarHandler : MonoBehaviour
 
     public void CloseToolbar()
     {
+        foreach (GameObject g in selectedGlow)
+            g.SetActive(false);
+
+        lastSelectedIndex = -1;
+
         toolbarAnimator.SetBool("OpenToolbar", false);
         exploreText.SetActive(true);
         exploreButton.SetActive(false);
@@ -80,6 +89,9 @@ public class ToolbarHandler : MonoBehaviour
 
     public void Explore()
     {
+        toolbarActive = false;
+        exploreActive = true;
+
         // Deactivate all irrelevant UI elements.
         foreach (GameObject g in selectedGlow)
             g.SetActive(false);
@@ -95,5 +107,38 @@ public class ToolbarHandler : MonoBehaviour
         // Display the explore scrolling text
         exploreWindow.SetActive(true);
         toolbarAnimator.SetBool("Explore", true);
+        toolbarAnimator.SetBool("OpenToolbar", false);
+
+        // Change booleans to alter what animation plays re-opening the toolbar when triggered.
+        exploreActive = true;
+        toolbarActive = false;
+    }
+
+    public void MapButton() // TODO
+    {
+        if (toolbarActive && !exploreActive) // Activates when the toolbar is open.
+        {
+            CloseToolbar();
+        }
+        else if (exploreActive && !toolbarActive) // Activates when the explore page is open.
+        {
+            // Begin Transition Out.
+            foreach (GameObject g in toolbarButtons)
+                g.SetActive(true);
+
+            toolbarAnimator.SetBool("Explore", false);
+            StartCoroutine(ExploreScrollDeactivation());
+
+            // Set us back to default state.
+            toolbarActive = true;
+            exploreActive = false;
+        }
+    }
+
+    private IEnumerator ExploreScrollDeactivation()
+    {
+        yield return new WaitForSeconds(0.19f);
+        exploreWindow.SetActive(false);
+        mapButton.SetActive(false);
     }
 }

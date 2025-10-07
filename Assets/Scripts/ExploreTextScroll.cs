@@ -4,10 +4,10 @@ public class ExploreTextScroll : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private float scrollDuration = 10f;
-    [SerializeField] private float startTop = 322f;                 // Update variable based on, on screen position. 
-    [SerializeField] private float startBottom = -322f;             // Update variable based on, on screen position. 
-    [SerializeField] private float endTop = -185f;                  // Update variable based on, on screen position. 
-    [SerializeField] private float endBottom = 185f;                // Update variable based on, on screen position. 
+    [SerializeField] private float startTop = 322f;               
+    [SerializeField] private float startBottom = -322f;           
+    [SerializeField] private float endTop = -185f;               
+    [SerializeField] private float endBottom = 185f;                
     [SerializeField] private float beginSecondThreshold = -10f;
 
     [Header("References")]

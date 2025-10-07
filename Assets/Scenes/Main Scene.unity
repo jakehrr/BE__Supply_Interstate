@@ -2981,7 +2981,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1299605718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2082284993}
+        m_TargetAssemblyTypeName: ToolbarHandler, Assembly-CSharp
+        m_MethodName: MapButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1299605718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5021,11 +5033,20 @@ MonoBehaviour:
   - {fileID: 627845360}
   - {fileID: 1692364236}
   - {fileID: 452815826}
-  toolbarButtons: []
+  toolbarButtons:
+  - {fileID: 1285213895}
+  - {fileID: 2081554270}
+  - {fileID: 1502234087}
+  - {fileID: 1671958692}
+  - {fileID: 256535051}
+  - {fileID: 1378320923}
+  - {fileID: 2025747561}
   exploreText: {fileID: 644131813}
   exploreButton: {fileID: 521449541}
   exploreWindow: {fileID: 1269533132}
   mapButton: {fileID: 1299605715}
+  toolbarActive: 1
+  exploreActive: 0
 --- !u!95 &2082284994
 Animator:
   serializedVersion: 7
