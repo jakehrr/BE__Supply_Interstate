@@ -179,8 +179,8 @@ MonoBehaviour:
   m_text: "Bapco Gas transforms Bahrain\u2019s most vital energy resource into the
     power that lights our cities and drives our industries."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -317,8 +317,8 @@ MonoBehaviour:
 
     Refining'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -461,7 +461,7 @@ MonoBehaviour:
     industries that drive Bahrain\u2019s economy, from aluminium and petrochemicals,
     to manufacturing.\L\LProviding the energy that powers advanced refining at Sitra."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: -193.14876, z: 0, w: -27.593529}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &83296722
@@ -599,8 +599,8 @@ MonoBehaviour:
 
     Upstream'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -812,8 +812,8 @@ MonoBehaviour:
 
     Gas'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1616,8 +1616,8 @@ MonoBehaviour:
 
     Air Fueling'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1827,8 +1827,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Select an area to explore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1971,7 +1971,7 @@ MonoBehaviour:
     industries that drive Bahrain\u2019s economy, from aluminium and petrochemicals,
     to manufacturing.\L\LProviding the energy that powers advanced refining at Sitra."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: -193.14876, z: 0, w: -27.593529}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &994405130
@@ -2395,8 +2395,8 @@ MonoBehaviour:
 
     Tazweed'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3533,8 +3533,8 @@ MonoBehaviour:
     we process and deliver this essential resource to power producers and leading
     industries including aluminium, petrochemicals and manufacturing."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3744,8 +3744,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BeVentures
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3974,8 +3974,8 @@ MonoBehaviour:
 
     Energies'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
+  m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5109,7 +5109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853186854824581458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a892b6bd06eabb64c9be347e6ae7ec13, type: 3}
   m_Name: 
@@ -5126,7 +5126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853186854824581458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8951a68af135fc34db89dd5650382ad7, type: 3}
   m_Name: 
