@@ -12,6 +12,7 @@ public class ToolbarHandler : MonoBehaviour
     [SerializeField] private GameObject exploreText;
     [SerializeField] private GameObject exploreButton;
     [SerializeField] private GameObject exploreWindow;
+    [SerializeField] private GameObject exploreBlur;
     [SerializeField] private GameObject mapButton;
 
     [Header("Toolbar States")]
@@ -99,6 +100,7 @@ public class ToolbarHandler : MonoBehaviour
 
         // Display the explore scrolling text
         exploreWindow.SetActive(true);
+        exploreBlur.SetActive(true);
         toolbarAnimator.SetBool("Explore", true);
         toolbarAnimator.SetBool("OpenToolbar", false);
         StartCoroutine(ActivateExplorePage());
