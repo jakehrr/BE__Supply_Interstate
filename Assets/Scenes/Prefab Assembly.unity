@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.9
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -119,6 +119,33 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1825136976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3912527604472137611, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+  m_PrefabInstance: {fileID: 1892531259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1825136981
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825136976}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7cfa3dec13d80ec4c8da9f67fd3ebd28, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1892531259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +154,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1184910672175357479, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: field of view
+      value: 67.972336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184910672175357479, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_FocalLength
+      value: 17.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1321735290379250296, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,10 +206,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1.4.0_Map Whole
       objectReference: {fileID: 0}
+    - target: {fileID: 5824948073887682586, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7241215
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0974053
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.73743933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.8100299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.40307716
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38224882
+      objectReference: {fileID: 0}
+    - target: {fileID: 8921159025918311651, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.18779293
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8976038997635794162, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3912527604472137611, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825136981}
   m_SourcePrefab: {fileID: 100100000, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
