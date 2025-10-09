@@ -2,63 +2,43 @@ using UnityEngine;
 
 public class LocationFocus : MonoBehaviour
 {
-    [Header("FOV Handling Variables")]
-    [SerializeField] private float FOVDefault = 2.76f;
-    [SerializeField] private float FOVFocusedVal = 1.12f;
-    [SerializeField] private float FOVZoomSpeed = 2f;
-    [SerializeField] private float lerpSpeed = 2f;
+    [SerializeField] private Animator cameraAnim;
 
-    [Header("Position Vectors")]
-    [SerializeField] private Vector3 defaultCameraPosition = new Vector3(-30.186f, 26.102f, -31.933f);
-    [SerializeField] private Vector3[] focusedLocationVectors;
+    [SerializeField] private bool bapcoGasFocus;
+    [SerializeField] private bool bapcoUpstreamFocus;
+    [SerializeField] private bool bapcoEnergiesFocus;
+    [SerializeField] private bool beVenturesFocus;
 
-    [Header("Rotation Vectors")]
-    [SerializeField] private Quaternion defaultCameraRotation = Quaternion.Euler(30f, 45f, 0f);
-    [SerializeField] private Quaternion[] focusedRotationVectors;
-
-    private CameraPan cameraPanScript;
-    private bool beginZoom = false;
-    private float lerpProgress = 0f;
-    private int locationIndex;
-
-    private Vector3 startPos;
-    private Quaternion startRot;
-
-    private void Start()
+    private void Awake()
     {
-        cameraPanScript = GetComponent<CameraPan>();
+        cameraAnim = GameObject.Find("CAMERA").GetComponent<Animator>();
     }
 
-    private void Update()
+    public void BapcoGasZoom()
     {
-        if (beginZoom)
-        {
-            lerpProgress += Time.deltaTime * lerpSpeed;
-            float t = Mathf.Clamp01(lerpProgress);
+        bapcoGasFocus = !bapcoGasFocus;
 
-            Vector3 targetPos = focusedLocationVectors[locationIndex];
-            Quaternion targetRot = focusedRotationVectors[locationIndex];
-
-            transform.position = Vector3.Lerp(startPos, targetPos, t);
-            transform.rotation = Quaternion.Slerp(startRot, targetRot, t);
-            this.GetComponent<Camera>().orthographicSize = Mathf.Lerp(FOVDefault, FOVFocusedVal, t);
-
-            if (t >= 1f)
-            {
-                beginZoom = false;
-            }
-        }
+        cameraAnim.SetBool("BapcoGas", bapcoGasFocus);
     }
 
-    public void FocusOnTarget(int targetIndex)
+    public void BapcoUpstreamZoom()
     {
-        cameraPanScript.enabled = false;
-        locationIndex = targetIndex;
+        bapcoUpstreamFocus = !bapcoUpstreamFocus;
 
-        startPos = transform.position;
-        startRot = transform.rotation;
-        lerpProgress = 0f;
+        cameraAnim.SetBool("BapcoUpstream", bapcoUpstreamFocus);
+    }
 
-        beginZoom = true;
+    public void BapcoEnergiesZoom()
+    {
+        bapcoEnergiesFocus = !bapcoEnergiesFocus;
+
+        cameraAnim.SetBool("BapcoEnergies", bapcoEnergiesFocus);
+    }
+
+    public void BeVenturesZoom()
+    {
+        beVenturesFocus = !beVenturesFocus;
+
+        cameraAnim.SetBool("BeVentures", beVenturesFocus);
     }
 }
