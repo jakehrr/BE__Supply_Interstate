@@ -32984,7 +32984,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0a916591b0c98654c9efa9211040fb5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86925,7 +86925,7 @@ MonoBehaviour:
   m_LoopMode: 1
   m_Method: 0
   m_Duration: 60
-  m_MaxSpeed: 1.2873751
+  m_MaxSpeed: 1.2829534
   m_EasingMode: 3
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 3
@@ -90884,21 +90884,21 @@ MonoBehaviour:
     - Position:
         x: -0.003209114
         y: 1.3700002
-        z: 2.3907318
+        z: 2.977732
       TangentIn:
         x: -0
         y: -0
-        z: -0.71069366
+        z: -0.80942345
       TangentOut:
         x: 0
         y: 0
-        z: 0.85442615
+        z: 0.7846154
       Rotation:
         value:
-          x: -0.16341959
-          y: -0.02607851
-          z: -0.008818778
-          w: 0.9861724
+          x: -0.12860128
+          y: -0.030493377
+          z: -0.007225805
+          w: 0.9912011
     - Position:
         x: -0.2702093
         y: 1.3679996
@@ -90906,17 +90906,17 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -0.69769895
+        z: -0.6001143
       TangentOut:
         x: 0
         y: 0
-        z: 0.57199514
+        z: 0.54858184
       Rotation:
         value:
-          x: 0.00014267808
-          y: -0.3748493
-          z: 0.0002214833
-          w: 0.92708564
+          x: 0.00018876273
+          y: -0.37991285
+          z: 0.00023887203
+          w: 0.92502224
     - Position:
         x: -2.2612092
         y: 1.3679996
@@ -93662,13 +93662,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8036728758210671262}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.40307716, y: -0.38224882, z: 0.18779293, w: -0.8100299}
-  m_LocalPosition: {x: -0.7241215, y: 1.0974053, z: -0.73743933}
+  m_LocalRotation: {x: 0.34247655, y: 0.41223294, z: -0.17075248, w: 0.82681155}
+  m_LocalPosition: {x: -2.625, y: 3.5, z: -2.28}
   m_LocalScale: {x: 0.19999999, y: 0.2, z: 0.20000002}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1321735290379250296}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 53, z: 0}
 --- !u!20 &8251589712106721555
 Camera:
   m_ObjectHideFlags: 0
@@ -93687,7 +93687,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 1000
-  m_FocalLength: 17.8
+  m_FocalLength: 80
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -93702,7 +93702,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 67.972336
+  field of view: 17.061533
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
