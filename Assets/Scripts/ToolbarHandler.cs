@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class ToolbarHandler : MonoBehaviour
 {
-    public GameObject[] selectedGlow;
+    [SerializeField] private LocationFocus locationFocusAccess;
 
     [Header("Main UI Elements")]
+    public GameObject[] selectedGlow;
     [SerializeField] private GameObject[] toolbarButtons;
     [SerializeField] private GameObject exploreText;
     [SerializeField] private GameObject exploreButton;
@@ -110,16 +111,18 @@ public class ToolbarHandler : MonoBehaviour
         toolbarActive = false;
     }
 
-    public void MapButton() // TODO
+    public void MapButton()
     {
         if (exploreActive)
         {
             toolbarAnimator.SetBool("Explore", false);
+            locationFocusAccess.MassZoomOut();
             StartCoroutine(ExploreScrollDeactivation());
         }
         else if (toolbarActive)
         {
             CloseToolbar();
+            locationFocusAccess.MassZoomOut();
         }
     }
 
@@ -142,5 +145,21 @@ public class ToolbarHandler : MonoBehaviour
         mapButton.SetActive(false);
         toolbarActive = true;
         exploreActive = false;
+    }
+
+    public void DisableButtonsForZoom()
+    {
+        foreach(GameObject go in toolbarButtons)
+        {
+            go.GetComponent<Button>().enabled = false;
+        }
+    }
+
+    public void EnableButtonsFromZoom()
+    {
+        foreach(GameObject go in toolbarButtons)
+        {
+            go.GetComponent<Button>().enabled = true;   
+        }
     }
 }
