@@ -171,6 +171,7 @@ public class ToolbarHandler : MonoBehaviour
 
         exploreWindow.SetActive(false);
         mapButton.SetActive(false);
+        exploreBlur.SetActive(false);
         toolbarActive = true;
         exploreActive = false;
     }
