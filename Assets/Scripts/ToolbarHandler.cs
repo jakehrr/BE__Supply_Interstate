@@ -10,6 +10,10 @@ public class ToolbarHandler : MonoBehaviour
     [Header("Main UI Elements")]
     public GameObject[] selectedGlow;
     [SerializeField] private GameObject[] toolbarButtons;
+    [SerializeField] private GameObject[] normalButtonState;
+    [SerializeField] private GameObject[] normalTextState;
+    [SerializeField] private GameObject[] fadedButtonState;
+    [SerializeField] private GameObject[] fadedTextState;
     [SerializeField] private GameObject exploreText;
     [SerializeField] private GameObject exploreButton;
     [SerializeField] private GameObject exploreWindow;
@@ -45,7 +49,21 @@ public class ToolbarHandler : MonoBehaviour
         {
             foreach (GameObject g in selectedGlow)
                 g.SetActive(false);
+            foreach (GameObject g in normalButtonState)
+                g.SetActive(false);
+            foreach (GameObject g in normalTextState)
+                g.SetActive(false);
 
+            foreach(GameObject g in fadedButtonState)
+                g.SetActive(true);
+            foreach (GameObject g in fadedTextState)
+                g.SetActive(true);
+
+
+            fadedButtonState[index].SetActive(false);
+            fadedTextState[index].SetActive(false);
+            normalButtonState[index].SetActive(true);
+            normalTextState[index].SetActive(true); 
             selectedGlow[index].SetActive(true);
             OpenToolbar();
 
@@ -115,6 +133,16 @@ public class ToolbarHandler : MonoBehaviour
     {
         if (exploreActive)
         {
+            foreach (GameObject g in normalButtonState)
+                g.SetActive(true);
+            foreach (GameObject g in normalTextState)
+                g.SetActive(true);
+
+            foreach (GameObject g in fadedButtonState)
+                g.SetActive(false);
+            foreach (GameObject g in fadedTextState)
+                g.SetActive(false);
+
             toolbarAnimator.SetBool("Explore", false);
             locationFocusAccess.MassZoomOut();
             StartCoroutine(ExploreScrollDeactivation());
@@ -122,6 +150,15 @@ public class ToolbarHandler : MonoBehaviour
         else if (toolbarActive)
         {
             CloseToolbar();
+            foreach (GameObject g in normalButtonState)
+                g.SetActive(true);
+            foreach (GameObject g in normalTextState)
+                g.SetActive(true);
+
+            foreach (GameObject g in fadedButtonState)
+                g.SetActive(false);
+            foreach (GameObject g in fadedTextState)
+                g.SetActive(false);
             locationFocusAccess.MassZoomOut();
         }
     }
