@@ -39,36 +39,27 @@ public class ToolbarHandler : MonoBehaviour
 
     public void HandleButtonPress(int index)
     {
-        bool sameButtonPressed = (index == lastSelectedIndex);
+        foreach (GameObject g in selectedGlow)
+            g.SetActive(false);
+        foreach (GameObject g in normalButtonState)
+            g.SetActive(false);
+        foreach (GameObject g in normalTextState)
+            g.SetActive(false);
 
-        if (sameButtonPressed)
-        {
-            CloseToolbar();
-        }
-        else
-        {
-            foreach (GameObject g in selectedGlow)
-                g.SetActive(false);
-            foreach (GameObject g in normalButtonState)
-                g.SetActive(false);
-            foreach (GameObject g in normalTextState)
-                g.SetActive(false);
-
-            foreach(GameObject g in fadedButtonState)
-                g.SetActive(true);
-            foreach (GameObject g in fadedTextState)
-                g.SetActive(true);
+        foreach(GameObject g in fadedButtonState)
+            g.SetActive(true);
+        foreach (GameObject g in fadedTextState)
+            g.SetActive(true);
 
 
-            fadedButtonState[index].SetActive(false);
-            fadedTextState[index].SetActive(false);
-            normalButtonState[index].SetActive(true);
-            normalTextState[index].SetActive(true); 
-            selectedGlow[index].SetActive(true);
-            OpenToolbar();
+        fadedButtonState[index].SetActive(false);
+        fadedTextState[index].SetActive(false);
+        normalButtonState[index].SetActive(true);
+        normalTextState[index].SetActive(true); 
+        selectedGlow[index].SetActive(true);
+        OpenToolbar();
 
-            lastSelectedIndex = index;
-        }
+        lastSelectedIndex = index;
     }
 
 
