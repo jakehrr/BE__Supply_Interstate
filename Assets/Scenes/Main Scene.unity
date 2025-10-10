@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LocationFocus
   toolbar: {fileID: 2082284993}
   cameraAnim: {fileID: 0}
+  triggerableAnim: {fileID: 0}
   zoomIn: 0
 --- !u!1 &186077262
 GameObject:
@@ -1593,6 +1594,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoRefiningZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5828,6 +5841,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoTazweedZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1378320926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9024,6 +9049,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoAirFuelingZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2025747564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9368,6 +9405,14 @@ MonoBehaviour:
   - {fileID: 627845360}
   - {fileID: 1692364236}
   - {fileID: 452815826}
+  locationUIBars:
+  - {fileID: 1127131628}
+  - {fileID: 46468771}
+  - {fileID: 422113358}
+  - {fileID: 1254681734}
+  - {fileID: 722581233}
+  - {fileID: 1549102059}
+  - {fileID: 1949176406}
   toolbarButtons:
   - {fileID: 1285213895}
   - {fileID: 2081554270}

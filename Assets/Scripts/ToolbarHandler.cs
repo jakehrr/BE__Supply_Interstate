@@ -9,6 +9,7 @@ public class ToolbarHandler : MonoBehaviour
 
     [Header("Main UI Elements")]
     public GameObject[] selectedGlow;
+    [SerializeField] private GameObject[] locationUIBars;
     [SerializeField] private GameObject[] toolbarButtons;
     [SerializeField] private GameObject[] normalButtonState;
     [SerializeField] private GameObject[] normalTextState;
@@ -45,6 +46,8 @@ public class ToolbarHandler : MonoBehaviour
             g.SetActive(false);
         foreach (GameObject g in normalTextState)
             g.SetActive(false);
+        foreach (GameObject g in locationUIBars)
+            g.SetActive(false);
 
         foreach(GameObject g in fadedButtonState)
             g.SetActive(true);
@@ -52,6 +55,7 @@ public class ToolbarHandler : MonoBehaviour
             g.SetActive(true);
 
 
+        locationUIBars[index].SetActive(true);
         fadedButtonState[index].SetActive(false);
         fadedTextState[index].SetActive(false);
         normalButtonState[index].SetActive(true);
@@ -128,6 +132,8 @@ public class ToolbarHandler : MonoBehaviour
                 g.SetActive(true);
             foreach (GameObject g in normalTextState)
                 g.SetActive(true);
+            foreach(GameObject g in locationUIBars)
+                g.SetActive(true);
 
             foreach (GameObject g in fadedButtonState)
                 g.SetActive(false);
@@ -144,6 +150,8 @@ public class ToolbarHandler : MonoBehaviour
             foreach (GameObject g in normalButtonState)
                 g.SetActive(true);
             foreach (GameObject g in normalTextState)
+                g.SetActive(true);
+            foreach (GameObject g in locationUIBars)
                 g.SetActive(true);
 
             foreach (GameObject g in fadedButtonState)
