@@ -3,12 +3,12 @@ using UnityEngine;
 public class ExploreTextScroll : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float scrollDuration = 10f;
-    [SerializeField] private float startTop = 322f;               
+    public float scrollDuration = 10f;
+    [SerializeField] private float startTop = 322f;
     [SerializeField] private float startBottom = -322f;           
-    [SerializeField] private float endTop = -185f;               
-    [SerializeField] private float endBottom = 185f;                
-    [SerializeField] private float beginSecondThreshold = -10f;
+    public float endTop = -185f;               
+    public float endBottom = 185f;
+    public float beginSecondThreshold = -10f;
 
     [Header("References")]
     [SerializeField] private RectTransform textSet1;
@@ -91,5 +91,19 @@ public class ExploreTextScroll : MonoBehaviour
             if (!activateTextB)
                 activateTextB = false;
         }
+    }
+
+    public void ResetTextPos()
+    {
+        // Set our start & end position to the start bottom and end bottom variables (top and bottom of rect transform). 
+        startPos = new Vector2(0f, startBottom);
+        endPos = new Vector2(0, endBottom);
+
+        // Anchor our text sets to the starting position ready to be moved towards the end position.
+        textSet1.anchoredPosition = startPos;
+        textSet2.anchoredPosition = startPos;
+
+        timerA = 0f; 
+        timerB = 0f;
     }
 }
