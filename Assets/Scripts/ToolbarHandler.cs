@@ -140,6 +140,7 @@ public class ToolbarHandler : MonoBehaviour
             foreach (GameObject g in fadedTextState)
                 g.SetActive(false);
 
+            exploreText.SetActive(true);
             toolbarAnimator.SetBool("Explore", false);
             locationFocusAccess.MassZoomOut();
             StartCoroutine(ExploreScrollDeactivation());
@@ -158,6 +159,8 @@ public class ToolbarHandler : MonoBehaviour
                 g.SetActive(false);
             foreach (GameObject g in fadedTextState)
                 g.SetActive(false);
+
+            exploreText.SetActive(true);
             locationFocusAccess.MassZoomOut();
         }
     }
