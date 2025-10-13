@@ -1667,7 +1667,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2128,7 +2128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2265,7 +2265,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2915,7 +2915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 2100000, guid: f6d46f1e916b3486c90a448a441fac6a, type: 2}
-  m_Color: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 1}
+  m_Color: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3822,7 +3822,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3959,7 +3959,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4075,7 +4075,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4659,7 +4659,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4921,7 +4921,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6816,7 +6816,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8106,7 +8106,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
-        m_MethodName: MainPanelOpen
+        m_MethodName: ExtendedPanelOpen
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8415,7 +8415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9450,7 +9450,7 @@ Animator:
   m_GameObject: {fileID: 2082284988}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 673f46914cbd1794e979a0b63fe99932, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b10bf3e89bbef34b99a41f68c9bc9a6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9495,6 +9495,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToolbarHandlerV2
   textScrollScript: {fileID: 2082284995}
+  anim: {fileID: 2082284994}
+  allMainPanelButtons:
+  - {fileID: 1766529865}
+  - {fileID: 971315339}
+  - {fileID: 349589872}
+  - {fileID: 447340782}
+  - {fileID: 734970953}
+  - {fileID: 450336571}
+  - {fileID: 856798836}
+  allExpandedButtons:
+  - {fileID: 533451057}
+  - {fileID: 366947899}
+  allScrollingButtons: []
   locationNames:
   - Bapco Energies
   - BeVentures

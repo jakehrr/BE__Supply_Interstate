@@ -1,11 +1,18 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToolbarHandlerV2 : MonoBehaviour
 {
     private int buttonIndex;
 
+    [Header("Dependant References")]
     [SerializeField] private ExploreTextScroll textScrollScript;
+    [SerializeField] private Animator anim;
+    [SerializeField] private GameObject[] allMainPanelButtons;
+    [SerializeField] private GameObject[] allExpandedButtons;
+    [SerializeField] private GameObject[] allScrollingButtons;
 
     [Header("UI Change Elements")]
     [SerializeField] private string[] locationNames;
@@ -25,21 +32,29 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [SerializeField] private GameObject expandedPanel;
     [SerializeField] private GameObject scrollingExplore;
 
-    public void MainPanelOpen(int index)
+    public void ExtendedPanelOpen(int index)
     {
+        foreach(GameObject go in allMainPanelButtons)
+            go.GetComponent<Button>().enabled = false;
+        foreach(GameObject go in allExpandedButtons)
+            go.GetComponent<Button>().enabled = false;
+
         buttonIndex = index;
         namedLocationBox.text = locationNames[index];
         textSet1.text = text1Paragraphs[index];
         textSet2.text = text2Paragraphs[index];
 
-        mainPanel.SetActive(false);
-        expandedPanel.SetActive(true);
+        anim.SetBool("ExpandedPanel", true);
+        anim.SetBool("MainPanel", false);
+
+        StartCoroutine(ExtendedPanelOpenTimer());
     }
 
     public void ExpandedPanelClose()
     {
-        expandedPanel.SetActive(false);
-        mainPanel.SetActive(true);
+        anim.SetBool("ExpandedPanel", false);
+        anim.SetBool("MainPanel", true);
+        StartCoroutine(MainPanelOpenTimer());
     }
 
     public void ScrollingExplore()
@@ -132,5 +147,27 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
                 break;
         }
+    }
+
+    private IEnumerator ExtendedPanelOpenTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        mainPanel.SetActive(false);
+        expandedPanel.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        foreach (GameObject go in allExpandedButtons)
+            go.GetComponent<Button>().enabled = true;
+    }
+
+    private IEnumerator MainPanelOpenTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        expandedPanel.SetActive(false);
+        mainPanel.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        foreach (GameObject go in allMainPanelButtons)
+            go.GetComponent<Button>().enabled = true;
     }
 }
