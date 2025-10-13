@@ -454,8 +454,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1074,7 +1074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8951a68af135fc34db89dd5650382ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LocationFocus
-  toolbar: {fileID: 0}
   cameraAnim: {fileID: 0}
   triggerableAnim: {fileID: 0}
   lightAnim: {fileID: 0}
@@ -1677,6 +1676,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoUpstreamZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &349589875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2138,6 +2149,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoGasZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &447340785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2271,6 +2294,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoTazweedZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2495,7 +2530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2818,6 +2853,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2082284996}
         m_TargetAssemblyTypeName: ToolbarHandlerV2, Assembly-CSharp
         m_MethodName: ExpandedPanelClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: MassZoomOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3245,6 +3292,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: MassZoomOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &593021536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,7 +3317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3832,6 +3891,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoRefiningZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &734970956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,6 +4036,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoAirFuelingZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4669,6 +4752,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BeVenturesZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &971315342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4781,8 +4876,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6150,7 +6245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8116,6 +8211,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 183533503}
+        m_TargetAssemblyTypeName: LocationFocus, Assembly-CSharp
+        m_MethodName: BapcoEnergiesZoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1766529868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9496,6 +9603,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ToolbarHandlerV2
   textScrollScript: {fileID: 2082284995}
   anim: {fileID: 2082284994}
+  worldspaceLocationBoxes:
+  - {fileID: 1127131628}
+  - {fileID: 46468771}
+  - {fileID: 422113358}
+  - {fileID: 1254681734}
+  - {fileID: 722581233}
+  - {fileID: 1549102059}
+  - {fileID: 1949176406}
   allMainPanelButtons:
   - {fileID: 1766529865}
   - {fileID: 971315339}
@@ -9507,7 +9622,9 @@ MonoBehaviour:
   allExpandedButtons:
   - {fileID: 533451057}
   - {fileID: 366947899}
-  allScrollingButtons: []
+  allScrollingButtons:
+  - {fileID: 496015552}
+  - {fileID: 593021533}
   locationNames:
   - Bapco Energies
   - BeVentures

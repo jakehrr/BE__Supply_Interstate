@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LocationFocus : MonoBehaviour
 {
-    [SerializeField] private ToolbarHandler toolbar;
+    //[SerializeField] private ToolbarHandler toolbar;
     [SerializeField] private Animator cameraAnim;
     [SerializeField] private Animator triggerableAnim;
     [SerializeField] private Animator lightAnim;
@@ -40,7 +40,7 @@ public class LocationFocus : MonoBehaviour
 
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.EnableButtonsFromZoom();
+        //toolbar.EnableButtonsFromZoom();
     }
 
     public void BapcoEnergiesZoom()
@@ -51,7 +51,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Energies", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+        //toolbar.DisableButtonsForZoom();
     }
 
     public void BeVenturesZoom()
@@ -62,7 +62,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Ventures", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+       // toolbar.DisableButtonsForZoom();
     }
 
     public void BapcoUpstreamZoom()
@@ -73,7 +73,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Upstream", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+      //  toolbar.DisableButtonsForZoom();
     }
 
     public void BapcoGasZoom()
@@ -84,7 +84,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Gas", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+      //  toolbar.DisableButtonsForZoom();
     }
 
     public void BapcoRefiningZoom()
@@ -95,7 +95,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Refining", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+      //  toolbar.DisableButtonsForZoom();
     }
 
     public void BapcoTazweedZoom()
@@ -106,7 +106,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Tazweeds", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+      //  toolbar.DisableButtonsForZoom();
     }
 
     public void BapcoAirFuelingZoom()
@@ -117,6 +117,6 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("AirFueling", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
-        toolbar.DisableButtonsForZoom();
+       // toolbar.DisableButtonsForZoom();
     }
 }

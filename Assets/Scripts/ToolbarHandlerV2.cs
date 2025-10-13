@@ -7,9 +7,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
 {
     private int buttonIndex;
 
-    [Header("Dependant References")]
+    [Header("Generic References")]
     [SerializeField] private ExploreTextScroll textScrollScript;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject[] worldspaceLocationBoxes;
     [SerializeField] private GameObject[] allMainPanelButtons;
     [SerializeField] private GameObject[] allExpandedButtons;
     [SerializeField] private GameObject[] allScrollingButtons;
@@ -20,7 +21,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [SerializeField] private string[] text2Paragraphs;
     [SerializeField] private string[] scrollingTextParagraph;
 
-    [Header("Primary UI References")]
+    [Header("Primary Text References")]
     [SerializeField] private TextMeshProUGUI namedLocationBox;
     [SerializeField] private TextMeshProUGUI textSet1;
     [SerializeField] private TextMeshProUGUI textSet2;
@@ -38,7 +39,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
             go.GetComponent<Button>().enabled = false;
         foreach(GameObject go in allExpandedButtons)
             go.GetComponent<Button>().enabled = false;
+        foreach(GameObject go in worldspaceLocationBoxes)
+            go.SetActive(false);
 
+        worldspaceLocationBoxes[index].SetActive(true);
         buttonIndex = index;
         namedLocationBox.text = locationNames[index];
         textSet1.text = text1Paragraphs[index];
@@ -54,36 +58,56 @@ public class ToolbarHandlerV2 : MonoBehaviour
     {
         anim.SetBool("ExpandedPanel", false);
         anim.SetBool("MainPanel", true);
+        foreach (GameObject go in worldspaceLocationBoxes)
+            go.SetActive(true);
         StartCoroutine(MainPanelOpenTimer());
     }
 
     public void ScrollingExplore()
     {
+        foreach(GameObject go in allExpandedButtons)
+            go.GetComponent<Button>().enabled = false;
+
+        anim.SetBool("ExpandedPanel", false);
+        anim.SetBool("ExploreScroll", true);
+
         scrollingTextSet1.text = scrollingTextParagraph[buttonIndex];
         scrollingTextSet2.text = scrollingTextParagraph[buttonIndex];
 
         // We are using this switch case to change the settings variables in the explore text scroll. 
         ChangeScrollSettings();
-
-        expandedPanel.SetActive(false);
-        scrollingExplore.SetActive(true);
         textScrollScript.enabled = true;
-
         textScrollScript.ResetTextPos();
+
+        StartCoroutine(ScrollingPanelOpenTimer());
     }
 
     public void ExpandedPanelFromExplore()
     {
+        foreach(GameObject go in allScrollingButtons)
+            go.GetComponent<Button>().enabled = false;
+
+        anim.SetBool("ExpandedPanel", true);
+        anim.SetBool("ExploreScroll", false);
+
         textScrollScript.enabled = false;
-        scrollingExplore.SetActive(false);
-        expandedPanel.SetActive(true);
+        StartCoroutine(ExpandedPanelFromScrollTimer());
     }
 
     public void MapFromScroll()
     {
+        foreach (GameObject go in allScrollingButtons)
+            go.GetComponent<Button>().enabled = false;
+
+        foreach (GameObject go in worldspaceLocationBoxes)
+            go.SetActive(true);
+
+        anim.SetBool("MainPanel", true);
+        anim.SetBool("ExploreScroll", false);
+
         textScrollScript.enabled = false;
-        scrollingExplore.SetActive(false);
-        mainPanel.SetActive(true);
+
+        StartCoroutine(MapFromScrollTimer());
     }
 
     private void ChangeScrollSettings()
@@ -168,6 +192,39 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         foreach (GameObject go in allMainPanelButtons)
+            go.GetComponent<Button>().enabled = true;
+    }
+
+    private IEnumerator ScrollingPanelOpenTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        expandedPanel.SetActive(false);
+        scrollingExplore.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        foreach(GameObject go in allScrollingButtons)
+            go.GetComponent<Button>().enabled = true;
+    }
+
+    private IEnumerator ExpandedPanelFromScrollTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        scrollingExplore.SetActive(false);
+        expandedPanel.SetActive(true);
+
+        yield return new WaitForSeconds(1f);    
+        foreach(GameObject go in allExpandedButtons)
+            go.GetComponent<Button>().enabled = true;
+    }
+
+    private IEnumerator MapFromScrollTimer()
+    {
+        yield return new WaitForSeconds(1f);
+        scrollingExplore.SetActive(false);
+        mainPanel.SetActive(true);
+
+        yield return new WaitForSeconds(1f);
+        foreach(GameObject go in allMainPanelButtons)
             go.GetComponent<Button>().enabled = true;
     }
 }
