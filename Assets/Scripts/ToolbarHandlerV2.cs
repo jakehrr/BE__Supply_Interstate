@@ -12,7 +12,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [SerializeField] private LocationFocus zoomOutReference;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator connectionAnim;
-    //[SerializeField] private GameObject[] connectionGo;
+    [SerializeField] private GameObject beVenturesPulse;
     [SerializeField] private GameObject[] worldspaceLocationBoxes;
     [SerializeField] private GameObject[] allMainPanelButtons;
     [SerializeField] private GameObject[] allExpandedButtons;
@@ -95,6 +95,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         foreach (GameObject go in worldspaceLocationBoxes)
             go.SetActive(false);
 
+        beVenturesPulse.SetActive(false);
         worldspaceLocationBoxes[buttonIndex].gameObject.SetActive(true);
         HandleCameraFromScrollToExpanded();
         connectionAnim.SetInteger("ConnectionState", 0);
@@ -157,6 +158,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 worldspaceLocationBoxes[4].SetActive(true);
                 worldspaceLocationBoxes[5].SetActive(true);
                 worldspaceLocationBoxes[6].SetActive(true);
+
+                beVenturesPulse.SetActive(true);
 
                 connectionAnim.SetInteger("ConnectionState", 2);
 

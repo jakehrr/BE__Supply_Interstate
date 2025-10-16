@@ -592,7 +592,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1078,6 +1078,7 @@ MonoBehaviour:
   triggerableAnim: {fileID: 0}
   lightAnim: {fileID: 0}
   toolbar: {fileID: 0}
+  beVenturesPulse: {fileID: 2082696434}
   zoomIn: 0
 --- !u!1 &186418860
 GameObject:
@@ -3409,7 +3410,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4371,7 +4372,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6006,7 +6007,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6489,7 +6490,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -7600,7 +7601,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9162,7 +9163,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9300,7 +9301,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9687,6 +9688,7 @@ MonoBehaviour:
   zoomOutReference: {fileID: 183533503}
   anim: {fileID: 2082284994}
   connectionAnim: {fileID: 1924393213}
+  beVenturesPulse: {fileID: 2082696434}
   worldspaceLocationBoxes:
   - {fileID: 1127131628}
   - {fileID: 46468771}
@@ -9813,6 +9815,11 @@ MonoBehaviour:
   mainPanel: {fileID: 693745011}
   expandedPanel: {fileID: 1199599702}
   scrollingExplore: {fileID: 1269533132}
+--- !u!1 &2082696434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9057225455531938300, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+  m_PrefabInstance: {fileID: 3823116900537756575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2083672406
 GameObject:
   m_ObjectHideFlags: 0

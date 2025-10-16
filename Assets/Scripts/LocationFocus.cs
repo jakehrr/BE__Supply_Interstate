@@ -7,6 +7,7 @@ public class LocationFocus : MonoBehaviour
     [SerializeField] private Animator triggerableAnim;
     [SerializeField] private Animator lightAnim;
     [SerializeField] private ToolbarHandlerV2 toolbar;
+    [SerializeField] private GameObject beVenturesPulse;
 
     [SerializeField] private bool zoomIn = false;
 
@@ -40,7 +41,7 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("AirFueling", zoomIn);
 
         lightAnim.SetBool("ZoomStart", zoomIn);
-
+        beVenturesPulse.SetActive(false);
         //toolbar.EnableButtonsFromZoom();
     }
 
@@ -65,6 +66,8 @@ public class LocationFocus : MonoBehaviour
         triggerableAnim.SetBool("Refining", zoomIn);
         triggerableAnim.SetBool("Tazweeds", zoomIn);
         triggerableAnim.SetBool("AirFueling", zoomIn);
+
+        beVenturesPulse.SetActive(false);
     }
 
     public void BapcoEnergiesZoom()
