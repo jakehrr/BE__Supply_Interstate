@@ -23,7 +23,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.8
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
@@ -10189,6 +10189,18 @@ PrefabInstance:
     - target: {fileID: 3557913715009114061, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_Name
       value: 1.4.0_Map Whole
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641051368304254926, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.909
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641051368304254926, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641051368304254926, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.725
       objectReference: {fileID: 0}
     - target: {fileID: 4928412608591119552, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_IsActive
