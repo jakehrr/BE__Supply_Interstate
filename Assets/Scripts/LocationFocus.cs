@@ -6,6 +6,7 @@ public class LocationFocus : MonoBehaviour
     [SerializeField] private Animator cameraAnim;
     [SerializeField] private Animator triggerableAnim;
     [SerializeField] private Animator lightAnim;
+    [SerializeField] private ToolbarHandlerV2 toolbar;
 
     [SerializeField] private bool zoomIn = false;
 
@@ -41,6 +42,29 @@ public class LocationFocus : MonoBehaviour
         lightAnim.SetBool("ZoomStart", zoomIn);
 
         //toolbar.EnableButtonsFromZoom();
+    }
+
+    public void ZoomOutForScroll()
+    {
+        zoomIn = false;
+
+        // Go back to default
+        cameraAnim.SetBool("BapcoEnergies", zoomIn);
+        cameraAnim.SetBool("BeVentures", zoomIn);
+        cameraAnim.SetBool("BapcoUpstream", zoomIn);
+        cameraAnim.SetBool("BapcoGas", zoomIn);
+        cameraAnim.SetBool("BapcoRefining", zoomIn);
+        cameraAnim.SetBool("BapcoTazweed", zoomIn);
+        cameraAnim.SetBool("BapcoAirFueling", zoomIn);
+
+        // Go back to default
+        triggerableAnim.SetBool("Energies", zoomIn);
+        triggerableAnim.SetBool("Ventures", zoomIn);
+        triggerableAnim.SetBool("Upstream", zoomIn);
+        triggerableAnim.SetBool("Gas", zoomIn);
+        triggerableAnim.SetBool("Refining", zoomIn);
+        triggerableAnim.SetBool("Tazweeds", zoomIn);
+        triggerableAnim.SetBool("AirFueling", zoomIn);
     }
 
     public void BapcoEnergiesZoom()

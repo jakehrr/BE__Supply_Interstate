@@ -9,7 +9,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
     [Header("Generic References")]
     [SerializeField] private ExploreTextScroll textScrollScript;
+    [SerializeField] private LocationFocus zoomOutReference;
     [SerializeField] private Animator anim;
+    [SerializeField] private Animator connectionAnim;
+    //[SerializeField] private GameObject[] connectionGo;
     [SerializeField] private GameObject[] worldspaceLocationBoxes;
     [SerializeField] private GameObject[] allMainPanelButtons;
     [SerializeField] private GameObject[] allExpandedButtons;
@@ -59,7 +62,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         anim.SetBool("ExpandedPanel", false);
         anim.SetBool("MainPanel", true);
         foreach (GameObject go in worldspaceLocationBoxes)
-            go.SetActive(true);
+            go.SetActive(false);
         StartCoroutine(MainPanelOpenTimer());
     }
 
@@ -67,6 +70,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
     {
         foreach(GameObject go in allExpandedButtons)
             go.GetComponent<Button>().enabled = false;
+
+        zoomOutReference.ZoomOutForScroll();
 
         anim.SetBool("ExpandedPanel", false);
         anim.SetBool("ExploreScroll", true);
@@ -87,6 +92,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
         foreach(GameObject go in allScrollingButtons)
             go.GetComponent<Button>().enabled = false;
 
+        foreach (GameObject go in worldspaceLocationBoxes)
+            go.SetActive(false);
+
+        worldspaceLocationBoxes[buttonIndex].gameObject.SetActive(true);
+        HandleCameraFromScrollToExpanded();
+        connectionAnim.SetInteger("ConnectionState", 0);
         anim.SetBool("ExpandedPanel", true);
         anim.SetBool("ExploreScroll", false);
 
@@ -100,7 +111,9 @@ public class ToolbarHandlerV2 : MonoBehaviour
             go.GetComponent<Button>().enabled = false;
 
         foreach (GameObject go in worldspaceLocationBoxes)
-            go.SetActive(true);
+            go.SetActive(false);
+
+        connectionAnim.SetInteger("ConnectionState", 0);
 
         anim.SetBool("MainPanel", true);
         anim.SetBool("ExploreScroll", false);
@@ -119,7 +132,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.endTop = -161f;
                 textScrollScript.endBottom = 161f;
                 textScrollScript.beginSecondThreshold = 80f;
-                textScrollScript.scrollDuration = 25f; 
+                textScrollScript.scrollDuration = 25f;
+
+                foreach (GameObject go in worldspaceLocationBoxes)
+                    go.SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 1);
 
                 break;
             case 1:
@@ -127,7 +145,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.endTop = -161f;
                 textScrollScript.endBottom = 161f;
                 textScrollScript.beginSecondThreshold = 80f;
-                textScrollScript.scrollDuration = 25f; 
+                textScrollScript.scrollDuration = 25f;
+
+                foreach (GameObject go in worldspaceLocationBoxes)
+                    go.SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 2);
 
                 break;
             case 2:
@@ -135,7 +158,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.endTop = -187f;
                 textScrollScript.endBottom = 187f;
                 textScrollScript.beginSecondThreshold = 115f;
-                textScrollScript.scrollDuration = 25f; 
+                textScrollScript.scrollDuration = 25f;
+
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 3);
 
                 break;
             case 3:
@@ -144,6 +172,11 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.endBottom = 195f;
                 textScrollScript.beginSecondThreshold = 133f;
                 textScrollScript.scrollDuration = 25f;
+
+                foreach (GameObject go in worldspaceLocationBoxes)
+                    go.SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 4);
 
                 break;
             case 4:
@@ -173,6 +206,48 @@ public class ToolbarHandlerV2 : MonoBehaviour
         }
     }
 
+    private void HandleCameraFromScrollToExpanded()
+    {
+        switch (buttonIndex)
+        {
+            case 0:
+                // Bapco Energies Camera Zoom
+                zoomOutReference.BapcoEnergiesZoom();
+                break;
+
+            case 1:
+                // BeVentures Camera Zoom
+                zoomOutReference.BeVenturesZoom();
+                break;
+
+            case 2:
+                // Bapco Upstream Camera Zoom
+
+                break;
+
+            case 3:
+                // Bapco Gas Camera Zoom
+
+                break;
+
+            case 4:
+                // Bapco Refining Camera Zoom
+
+                break;
+
+            case 5:
+                // Bapco Tazweed Camera Zoom
+
+                break;
+
+            case 6:
+                // Bapco Air Fueling Camera Zoom
+
+                break;
+        }
+    }
+
+    // Timer Enumerator Methods
     private IEnumerator ExtendedPanelOpenTimer()
     {
         yield return new WaitForSeconds(1f);
