@@ -134,8 +134,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.beginSecondThreshold = 80f;
                 textScrollScript.scrollDuration = 25f;
 
-                foreach (GameObject go in worldspaceLocationBoxes)
-                    go.SetActive(true);
+                worldspaceLocationBoxes[0].SetActive(true);
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 connectionAnim.SetInteger("ConnectionState", 1);
 
@@ -147,8 +151,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.beginSecondThreshold = 80f;
                 textScrollScript.scrollDuration = 25f;
 
-                foreach (GameObject go in worldspaceLocationBoxes)
-                    go.SetActive(true);
+                worldspaceLocationBoxes[0].SetActive(true);
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 connectionAnim.SetInteger("ConnectionState", 2);
 
@@ -186,6 +194,14 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.beginSecondThreshold = 370f;
                 textScrollScript.scrollDuration = 50f;
 
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 5);
+
                 break;
             case 5:
                 // Bapco Tazweed
@@ -194,6 +210,11 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.beginSecondThreshold = 290f;
                 textScrollScript.scrollDuration = 50f;
 
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 6);
+
                 break;
             case 6:
                 // Bapco Air Fueling
@@ -201,6 +222,12 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 textScrollScript.endBottom = 312f;
                 textScrollScript.beginSecondThreshold = 238f;
                 textScrollScript.scrollDuration = 50f;
+
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
+
+                connectionAnim.SetInteger("ConnectionState", 7);
 
                 break;
         }
@@ -222,27 +249,27 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
             case 2:
                 // Bapco Upstream Camera Zoom
-
+                zoomOutReference.BapcoUpstreamZoom();
                 break;
 
             case 3:
                 // Bapco Gas Camera Zoom
-
+                zoomOutReference.BapcoGasZoom();
                 break;
 
             case 4:
                 // Bapco Refining Camera Zoom
-
+                zoomOutReference.BapcoRefiningZoom();
                 break;
 
             case 5:
                 // Bapco Tazweed Camera Zoom
-
+                zoomOutReference.BapcoTazweedZoom();
                 break;
 
             case 6:
                 // Bapco Air Fueling Camera Zoom
-
+                zoomOutReference.BapcoAirFuelingZoom();
                 break;
         }
     }
