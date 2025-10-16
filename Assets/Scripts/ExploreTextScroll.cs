@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ExploreTextScroll : MonoBehaviour
 {
@@ -105,5 +106,7 @@ public class ExploreTextScroll : MonoBehaviour
 
         timerA = 0f; 
         timerB = 0f;
+
+        activateTextB = false;
     }
 }
