@@ -453,7 +453,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4352,7 +4352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15.5}
+  m_AnchoredPosition: {x: 0, y: 342}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &994405129
@@ -4375,15 +4375,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "From the Refinery, upgraded through the BMP, jet fuel reaches Air Fueling
-    via Tazweed at global standards of safety, quality and performance. Ready to
-    power the aircraft that connect Bahrain to the world.\r\n\r\nThrough Bapco Tazweed,
-    refined products flow seamlessly to airport storage and into Air Fueling\u2019s
-    operations; ensuring uninterrupted supply and flawless service for airlines every
-    day.\r\n\r\nAt Bahrain International Airport, Air Fueling provides the energy
-    that keeps flights moving. By powering aviation, we enable trade, tourism and
-    global connectivity, putting Bahrain at the heart of regional and international
-    travel."
+  m_text: "Refining \u2192 Tazweed\n\nFrom the Refinery, upgraded through the BMP,
+    jet fuel reaches Air Fueling via Tazweed at global standards of safety, quality
+    and performance. Ready to power the aircraft that connect Bahrain to the world.
+    \n\nTazweed \u2192 Air Fueling \n\nThrough Bapco Tazweed, refined products flow
+    seamlessly to airport storage and into Air Fueling\u2019s operations; ensuring
+    uninterrupted supply and flawless service for airlines every day. \n\nAir Fueling
+    \u2192 Connectivity\n\nAt Bahrain International Airport, Air Fueling provides
+    the energy that keeps flights moving. By powering aviation, we enable trade,
+    tourism and global connectivity, putting Bahrain at the heart of regional and
+    international travel."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
   m_sharedMaterial: {fileID: 5742879917524965670, guid: 1bfd1cc71e71ae24593f2291a01eb6ed, type: 2}
@@ -4392,7 +4393,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6927,7 +6928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
-  m_Softness: {x: 0, y: 171}
+  m_Softness: {x: 0, y: 73}
 --- !u!1 &1662194049
 GameObject:
   m_ObjectHideFlags: 0
@@ -8713,6 +8714,8 @@ MonoBehaviour:
   beginSecondThreshold: 80
   textSet1: {fileID: 994405128}
   textSet2: {fileID: 83296719}
+  shouldScroll: 0
+  toolbar: {fileID: 0}
 --- !u!114 &2082284996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8725,6 +8728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23c043b2e0d2384e895a6dbeab12b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ToolbarHandlerV2
+  buttonIndex: 0
   textScrollScript: {fileID: 2082284995}
   zoomOutReference: {fileID: 183533503}
   anim: {fileID: 2082284994}
@@ -8805,49 +8809,58 @@ MonoBehaviour:
     in the Kingdom\u2019s aviation sector, powering connectivity, trade and tourism
     24/7."
   scrollingTextParagraph:
-  - Bapco Energies operates a portfolio spanning the entire energy value chain. Our
-    portfolio includes wholly-owned subsidiaries and specialized Operating Companies.
-  - BeVentures accelerates opportunities across the value chain from Upstream and
-    Gas, to Refining and Distribution, while exploring solar, wind, carbon solutions
-    and pioneering new technologies.
-  - Associated gas from the Bahrain Field is processed and treated by Bapco Gas on-field
-    before entering domestic gas networks and industry.  Upstream crude is transported
-    to the Refinery for conversion into fuels and higher-value products.
-  - "Supplying EWA with the gas that powers Bahrain\u2019s homes and cities.  Fueling
+  - "Bapco Energies \u2192 Supply Chain \\n \\n Bapco Energies operates a portfolio
+    spanning the entire energy value chain. Our portfolio includes wholly-owned subsidiaries
+    and specialized Operating Companies."
+  - "BeVentures \u2192 Core Ops \\n \\n BeVentures accelerates opportunities across
+    the value chain from Upstream and Gas, to Refining and Distribution, while exploring
+    solar, wind, carbon solutions and pioneering new technologies."
+  - "Upstream \u2192 Gas \\n \\n Associated gas from the Bahrain Field is processed
+    and treated by Bapco Gas on-field before entering domestic gas networks and industry.
+    \\n \\n Upstream \u2192 Refining \\n \\n  Upstream crude is transported to the
+    Refinery for conversion into fuels and higher-value products."
+  - "Gas \u2192 EWA \\n \\n Supplying EWA with the gas that powers Bahrain\u2019s
+    homes and cities. \\n \\n Gas \u2192 Bahrain\u2019s Industries \\n \\n Fueling
     the industries that drive Bahrain\u2019s economy, from aluminium and petrochemicals,
-    to manufacturing.  Providing the energy that powers advanced refining."
-  - "Crude oil is received by the Refinery from the Bahrain Field and Saudi pipeline.
-    Refining transforms these raw resources into higher-value products that fuel
-    Bahrain and global markets.  Bapco Gas provides the clean, reliable fuel that
-    powers refinery operations, driving efficiency while capturing value from every
-    molecule.  Refined products are delivered through Bapco Tazweed\u2019s retail,
-    industrial and LPG network, and via Bapco Air Fueling to international airlines,
-    ensuring energy reaches people, businesses and global connections.  Various refined
-    products flow into regional and international markets, strengthened by partnerships
-    such as TotalEnergies. Trading expands Bahrain\u2019s global reach and maximises
-    the value of every barrel.  The Bapco Modernization Programme has transformed
-    the Refinery into a world-class facility increasing capacity, elevating product
-    quality, reducing energy intensity and enabling cleaner fuels that support Bahrain\u2019s
-    growth and sustainability goals."
-  - "Gasoline and diesel power everyday journeys, LPG fuels homes and businesses,
-    jet fuel connects Bahrain to global aviation, keeping industries moving. With
-    cleaner fuels enabled by the BMP, Tazweed ensures reliable energy today while
-    preparing for tomorrow\u2019s mobility solutions.  Through service stations across
-    Bahrain, delivering high-quality fuels alongside partnerships offering retail,
-    dining and lifestyle services. By blending reliable energy with modern amenities
-    and customer care, Tazweed enhances daily journeys and creates destinations that
-    energize Bahrain\u2019s communities.  As part of Bapco Energies long term strategic
-    direction, Tazweed is expanding its network under a refreshed brand, and developing
-    new fuel station designs. Bapco Energies is preparing for possible alternative
-    fuels and mobility."
-  - "From the Refinery, upgraded through the BMP, jet fuel reaches Air Fueling via
-    Tazweed at global standards of safety, quality and performance. Ready to power
-    the aircraft that connect Bahrain to the world.  Through Bapco Tazweed, refined
-    products flow seamlessly to airport storage and into Air Fueling\u2019s operations;
-    ensuring uninterrupted supply and flawless service for airlines every day.  At
-    Bahrain International Airport, Air Fueling provides the energy that keeps flights
-    moving. By powering aviation, we enable trade, tourism and global connectivity,
-    putting Bahrain at the heart of regional and international travel."
+    to manufacturing. \\n \\n  Gas \u2192 Refining/BMP \\n \\n Providing the energy
+    that powers advanced refining."
+  - "Upstream \u2192 Refining \\n \\n Crude oil is received by the Refinery from
+    the Bahrain Field and Saudi pipeline. Refining transforms these raw resources
+    into higher-value products that fuel Bahrain and global markets. \\n \\n  Gas
+    \u2192 Refining \\n \\n Bapco Gas provides the clean, reliable fuel that powers
+    refinery operations, driving efficiency while capturing value from every molecule.
+    \\n \\n Refining \u2192 Distribution \\n \\n Refined products are delivered through
+    Bapco Tazweed\u2019s retail, industrial and LPG network, and via Bapco Air Fueling
+    to international airlines, ensuring energy reaches people, businesses and global
+    connections. \\n \\n Refining \u2192 BxT Trading \\n \\n Various refined products
+    flow into regional and international markets, strengthened by partnerships such
+    as TotalEnergies. Trading expands Bahrain\u2019s global reach and maximises the
+    value of every barrel. \\n \\n BMP -> ESG \\n \\n The Bapco Modernization Programme
+    has transformed the Refinery into a world-class facility increasing capacity,
+    elevating product quality, reducing energy intensity and enabling cleaner fuels
+    that support Bahrain\u2019s growth and sustainability goals."
+  - "Refining \u2192 Tazweed \\n \\n Gasoline and diesel power everyday journeys,
+    LPG fuels homes and businesses, jet fuel connects Bahrain to global aviation,
+    keeping industries moving. With cleaner fuels enabled by the BMP, Tazweed ensures
+    reliable energy today while preparing for tomorrow\u2019s mobility solutions.
+    \\n \\n Tazweed \u2192 Consumer \\n \\n Through service stations across Bahrain,
+    delivering high-quality fuels alongside partnerships offering retail, dining
+    and lifestyle services. By blending reliable energy with modern amenities and
+    customer care, Tazweed enhances daily journeys and creates destinations that
+    energize Bahrain\u2019s communities. \\n \\n Tazweed \u2192 Future Mobility \\n
+    \\n As part of Bapco Energies long term strategic direction, Tazweed is expanding
+    its network under a refreshed brand, and developing new fuel station designs.
+    Bapco Energies is preparing for possible alternative fuels and mobility."
+  - "Refining \u2192 Tazweed \\n \\n From the Refinery, upgraded through the BMP,
+    jet fuel reaches Air Fueling via Tazweed at global standards of safety, quality
+    and performance. Ready to power the aircraft that connect Bahrain to the world.
+    \\n \\n Tazweed \u2192 Air Fueling \\n \\n Through Bapco Tazweed, refined products
+    flow seamlessly to airport storage and into Air Fueling\u2019s operations; ensuring
+    uninterrupted supply and flawless service for airlines every day. \\n \\n Air
+    Fueling \u2192 Connectivity \\n \\n At Bahrain International Airport, Air Fueling
+    provides the energy that keeps flights moving. By powering aviation, we enable
+    trade, tourism and global connectivity, putting Bahrain at the heart of regional
+    and international travel."
   namedLocationBox: {fileID: 1435427875}
   textSet1: {fileID: 889676300}
   textSet2: {fileID: 1005132583}

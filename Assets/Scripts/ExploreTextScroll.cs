@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -23,8 +24,14 @@ public class ExploreTextScroll : MonoBehaviour
     private Vector2 startPos;
     private Vector2 endPos;
 
+    [HideInInspector] public bool shouldScroll;
+
+    [SerializeField] private ToolbarHandlerV2 toolbar;
+
     private void Start()
     {
+        toolbar = GameObject.Find("Toolbar Handler").GetComponent<ToolbarHandlerV2>();
+
         // Set our start & end position to the start bottom and end bottom variables (top and bottom of rect transform). 
         startPos = new Vector2(0f, startBottom);
         endPos = new Vector2(0, endBottom);
@@ -36,61 +43,67 @@ public class ExploreTextScroll : MonoBehaviour
 
     private void Update()
     {
-        float timeDelta = Time.deltaTime;
+        if (!shouldScroll)
+            NonMovingText(toolbar.buttonIndex);
 
-        // Create a timer for timer A based on delta time, which will then move the first text set up towards the end position. 
-        if (activateTextA)
+        if (shouldScroll)
         {
-            timerA += timeDelta;
-            float tA = timerA / scrollDuration;
-            textSet1.anchoredPosition = Vector2.Lerp(startPos, endPos, tA);
+            float timeDelta = Time.deltaTime;
 
-            // If text set 2 hasn't started moving, and text set 1 reaches the threshold, allow text set B to start moving. 
-            if (!activateTextB && textSet1.anchoredPosition.y >= beginSecondThreshold)
+            // Create a timer for timer A based on delta time, which will then move the first text set up towards the end position. 
+            if (activateTextA)
             {
-                activateTextB = true;
-                timerB = 0f;
+                timerA += timeDelta;
+                float tA = timerA / scrollDuration;
+                textSet1.anchoredPosition = Vector2.Lerp(startPos, endPos, tA);
+
+                // If text set 2 hasn't started moving, and text set 1 reaches the threshold, allow text set B to start moving. 
+                if (!activateTextB && textSet1.anchoredPosition.y >= beginSecondThreshold)
+                {
+                    activateTextB = true;
+                    timerB = 0f;
+                }
+
+                // If text set 1 has reached the end position, reset it back to the start to restart its loop. 
+                // However, wait until text set 2 reaches threshold before reactivating.
+                if (tA >= 1f)
+                {
+                    activateTextA = false;
+                    timerA = 0f;
+                    textSet1.anchoredPosition = startPos;
+                }
             }
 
-            // If text set 1 has reached the end position, reset it back to the start to restart its loop. 
-            // However, wait until text set 2 reaches threshold before reactivating.
-            if (tA >= 1f)
+            // Once active, begin moving text set 2 using the same method towards the end position. 
+            if (activateTextB)
             {
-                activateTextA = false;
-                timerA = 0f;
-                textSet1.anchoredPosition = startPos;
+                timerB += timeDelta;
+                float tB = timerB / scrollDuration;
+                textSet2.anchoredPosition = Vector3.Lerp(startPos, endPos, tB);
+
+                // When text set 2 reaches threshold, allow text set 1 to move again.
+                if (!activateTextA && textSet2.anchoredPosition.y >= beginSecondThreshold)
+                {
+                    activateTextA = true;
+                    timerA = 0f;
+                }
+
+                // If text set 2 has reached the end position, reset it back to the start to reset its loop. 
+                if (tB >= 1f)
+                {
+                    activateTextB = false;
+                    timerB = 0f;
+                    textSet2.anchoredPosition = startPos;
+                }
             }
-        }
 
-        // Once active, begin moving text set 2 using the same method towards the end position. 
-        if (activateTextB)
-        {
-            timerB += timeDelta;
-            float tB = timerB / scrollDuration;
-            textSet2.anchoredPosition = Vector3.Lerp(startPos, endPos, tB);
-
-            // When text set 2 reaches threshold, allow text set 1 to move again.
-            if (!activateTextA && textSet2.anchoredPosition.y >= beginSecondThreshold)
+            // Safety catch to keep loop secure. 
+            if (timerA == 0f && !activateTextA)
             {
-                activateTextA = true;
-                timerA = 0f;
+                // Only reset if both have finished a full cycle
+                if (!activateTextB)
+                    activateTextB = false;
             }
-
-            // If text set 2 has reached the end position, reset it back to the start to reset its loop. 
-            if (tB >= 1f)
-            {
-                activateTextB = false;
-                timerB = 0f;
-                textSet2.anchoredPosition = startPos;
-            }
-        }
-
-        // Safety catch to keep loop secure. 
-        if (timerA == 0f && !activateTextA)
-        {
-            // Only reset if both have finished a full cycle
-            if (!activateTextB)
-                activateTextB = false;
         }
     }
 
@@ -107,6 +120,23 @@ public class ExploreTextScroll : MonoBehaviour
         timerA = 0f; 
         timerB = 0f;
 
+        activateTextA = true;
         activateTextB = false;
+    }
+
+    private void NonMovingText(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                Vector2 energiesPos = new Vector2(0, 77.5f);
+                textSet1.anchoredPosition = energiesPos;
+                break;
+
+            case 1:
+                Vector2 venturesPos = new Vector2(0, 85f);
+                textSet1.anchoredPosition = venturesPos;
+                break;
+        }
     }
 }

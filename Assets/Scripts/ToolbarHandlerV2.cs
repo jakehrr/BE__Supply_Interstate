@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ToolbarHandlerV2 : MonoBehaviour
 {
-    private int buttonIndex;
+    [HideInInspector] public int buttonIndex;
 
     [Header("Generic References")]
     [SerializeField] private ExploreTextScroll textScrollScript;
@@ -82,6 +82,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         // We are using this switch case to change the settings variables in the explore text scroll. 
         ChangeScrollSettings();
         textScrollScript.enabled = true;
+
         textScrollScript.ResetTextPos();
 
         StartCoroutine(ScrollingPanelOpenTimer());
@@ -130,10 +131,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         {
             case 0:
                 // Bapco Energies
-                textScrollScript.endTop = -161f;
-                textScrollScript.endBottom = 161f;
-                textScrollScript.beginSecondThreshold = 80f;
-                textScrollScript.scrollDuration = 25f;
+                textScrollScript.shouldScroll = false;
 
                 worldspaceLocationBoxes[0].SetActive(true);
                 worldspaceLocationBoxes[2].SetActive(true);
@@ -147,10 +145,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 break;
             case 1:
                 // BeVentures
-                textScrollScript.endTop = -161f;
-                textScrollScript.endBottom = 161f;
-                textScrollScript.beginSecondThreshold = 80f;
-                textScrollScript.scrollDuration = 25f;
+                textScrollScript.shouldScroll = false;
 
                 worldspaceLocationBoxes[0].SetActive(true);
                 worldspaceLocationBoxes[2].SetActive(true);
@@ -161,14 +156,15 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
                 beVenturesPulse.SetActive(true);
 
-                connectionAnim.SetInteger("ConnectionState", 2);
+                //connectionAnim.SetInteger("ConnectionState", 2);
 
                 break;
             case 2:
                 // Bapco Upstream
-                textScrollScript.endTop = -187f;
-                textScrollScript.endBottom = 187f;
-                textScrollScript.beginSecondThreshold = 115f;
+                textScrollScript.shouldScroll = true;
+                textScrollScript.endTop = -246f;
+                textScrollScript.endBottom = 246f;
+                textScrollScript.beginSecondThreshold = 200f;
                 textScrollScript.scrollDuration = 25f;
 
                 worldspaceLocationBoxes[3].SetActive(true);
@@ -179,9 +175,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 break;
             case 3:
                 // Bapco Gas
-                textScrollScript.endTop = -195f;
-                textScrollScript.endBottom = 195f;
-                textScrollScript.beginSecondThreshold = 133f;
+                textScrollScript.shouldScroll = true;
+                textScrollScript.endTop = -293f;
+                textScrollScript.endBottom = 293f;
+                textScrollScript.beginSecondThreshold = 247f;
                 textScrollScript.scrollDuration = 25f;
 
                 foreach (GameObject go in worldspaceLocationBoxes)
@@ -192,9 +189,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 break;
             case 4:
                 // Bapco Refining
-                textScrollScript.endTop = -456f;
-                textScrollScript.endBottom = 456f;
-                textScrollScript.beginSecondThreshold = 370f;
+                textScrollScript.shouldScroll = true;
+                textScrollScript.endTop = -599f;
+                textScrollScript.endBottom = 599f;
+                textScrollScript.beginSecondThreshold = 542f;
                 textScrollScript.scrollDuration = 50f;
 
                 worldspaceLocationBoxes[2].SetActive(true);
@@ -208,9 +206,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 break;
             case 5:
                 // Bapco Tazweed
-                textScrollScript.endTop = -382;
-                textScrollScript.endBottom = 382f;
-                textScrollScript.beginSecondThreshold = 290f;
+                textScrollScript.shouldScroll = true;
+                textScrollScript.endTop = -444;
+                textScrollScript.endBottom = 444f;
+                textScrollScript.beginSecondThreshold = 399f;
                 textScrollScript.scrollDuration = 50f;
 
                 worldspaceLocationBoxes[4].SetActive(true);
@@ -221,9 +220,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 break;
             case 6:
                 // Bapco Air Fueling
-                textScrollScript.endTop = -312;
-                textScrollScript.endBottom = 312f;
-                textScrollScript.beginSecondThreshold = 238f;
+                textScrollScript.shouldScroll = true;
+                textScrollScript.endTop = -392;
+                textScrollScript.endBottom = 392f;
+                textScrollScript.beginSecondThreshold = 342f;
                 textScrollScript.scrollDuration = 50f;
 
                 worldspaceLocationBoxes[4].SetActive(true);
