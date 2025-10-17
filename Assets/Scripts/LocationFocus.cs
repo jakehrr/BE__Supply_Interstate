@@ -74,7 +74,8 @@ public class LocationFocus : MonoBehaviour
     {
         zoomIn = !zoomIn;
 
-        cameraAnim.SetBool("BapcoEnergies", zoomIn);
+       // cameraAnim.SetBool("BapcoEnergies", zoomIn);
+        cameraAnim.SetBool("BeVentures", zoomIn);
         triggerableAnim.SetBool("Energies", zoomIn);
         lightAnim.SetBool("ZoomStart", zoomIn);
 
