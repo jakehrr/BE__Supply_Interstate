@@ -144,7 +144,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
                 worldspaceLocationBoxes[5].SetActive(true);
                 worldspaceLocationBoxes[6].SetActive(true);
 
-                connectionAnim.SetInteger("ConnectionState", 1);
+                beVenturesPulse.SetActive(true);
+                //connectionAnim.SetInteger("ConnectionState", 1);
 
                 break;
             case 1:
@@ -321,7 +322,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         scrollingExplore.SetActive(false);
         expandedPanel.SetActive(true);
 
-        yield return new WaitForSeconds(1f);    
+        yield return new WaitForSeconds(2f);    
         foreach(GameObject go in allExpandedButtons)
             go.GetComponent<Button>().enabled = true;
     }
