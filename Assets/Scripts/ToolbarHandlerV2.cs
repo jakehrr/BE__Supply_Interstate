@@ -135,36 +135,69 @@ public class ToolbarHandlerV2 : MonoBehaviour
         {
             case 0:
                 carousel.PopulateCarousel(buttonIndex, 1);
+                connectionAnim.SetInteger("ConnectionState", 1);
+                worldspaceLocationBoxes[0].SetActive(true);
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 break;
 
             case 1:
                 carousel.PopulateCarousel(buttonIndex, 1);
+                connectionAnim.SetInteger("ConnectionState", 2);
+                worldspaceLocationBoxes[0].SetActive(true);
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 break;
 
             case 2:
                 carousel.PopulateCarousel(buttonIndex, 2);
+                connectionAnim.SetInteger("ConnectionState", 3);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
 
                 break;
 
             case 3:
                 carousel.PopulateCarousel(buttonIndex, 3);
+                connectionAnim.SetInteger("ConnectionState", 4);
+                foreach (GameObject go in worldspaceLocationBoxes)
+                    go.SetActive(true);
 
                 break;
 
             case 4:
                 carousel.PopulateCarousel(buttonIndex, 5);
+                connectionAnim.SetInteger("ConnectionState", 5);
+                worldspaceLocationBoxes[2].SetActive(true);
+                worldspaceLocationBoxes[3].SetActive(true);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 break;
 
             case 5:
                 carousel.PopulateCarousel(buttonIndex, 3);
+                connectionAnim.SetInteger("ConnectionState", 6);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
 
                 break;
 
             case 6:
                 carousel.PopulateCarousel(buttonIndex, 3);
+                connectionAnim.SetInteger("ConnectionState", 7);
+                worldspaceLocationBoxes[4].SetActive(true);
+                worldspaceLocationBoxes[5].SetActive(true);
+                worldspaceLocationBoxes[6].SetActive(true);
 
                 break;
         }

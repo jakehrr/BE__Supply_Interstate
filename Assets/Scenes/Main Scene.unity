@@ -1113,7 +1113,7 @@ RectTransform:
   m_GameObject: {fileID: 222015227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86476, y: 0.86476, z: 0.86476}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 98581241}
@@ -1124,7 +1124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 48}
+  m_AnchoredPosition: {x: 0.70593, y: -16.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222015229
@@ -1151,8 +1151,11 @@ MonoBehaviour:
     opportunities across the value chain from Upstream and Gas, to Refining and Distribution,
     while exploring solar, wind, carbon solutions and pioneering new technologies."
   upstreamText:
-  - 
-  - 
+  - "<b>Upstream \u2192 Gas</b> \\n \\n Associated gas from the Bahrain Field is
+    processed and treated by Bapco Gas on-field before entering domestic gas networks
+    and industry."
+  - "<b>Upstream \u2192 Refining</b> \\n \\n Upstream crude is transported to the
+    Refinery for conversion into fuels and higher-value products."
   gasText:
   - "<b>Gas \u2192 EWA</b> \\n \\n Supplying EWA with the gas that powers Bahrain\u2019s
     homes and cities."
@@ -1161,19 +1164,50 @@ MonoBehaviour:
   - "<b>Gas \u2192 Refining/BMP</b> \\n \\n Providing the energy that powers advanced
     refining."
   refiningText:
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "<b>Upstream \u2192 Refining</b> \\n \\n Crude oil is received by the Refinery
+    from the Bahrain Field and Saudi pipeline. Refining transforms these raw resources
+    into higher-value products that fuel Bahrain and global markets."
+  - "<b>Gas \u2192 Refining</b> \\n \\n Bapco Gas provides the clean, reliable fuel
+    that powers refinery operations, driving efficiency while capturing value from
+    every molecule."
+  - "<b>Refining \u2192 Distribution</b> \\n \\n Refined products are delivered through
+    Bapco Tazweed\u2019s retail, industrial and LPG network, and via Bapco Air Fueling
+    to international airlines, ensuring energy reaches people, businesses and global
+    connections."
+  - "<b>Refining \u2192 BxT Trading</b> \\n \\n Various refined products flow into
+    regional and international markets, strengthened by partnerships such as TotalEnergies.
+    Trading expands Bahrain\u2019s global reach and maximises the value of every
+    barrel."
+  - "<b>BMP -> ESG</b> \\n \\n The Bapco Modernization Programme has transformed
+    the Refinery into a world-class facility increasing capacity, elevating product
+    quality, reducing energy intensity and enabling cleaner fuels that support Bahrain\u2019s
+    growth and sustainability goals."
   tazweedText:
-  - 
-  - 
-  - 
+  - "<b>Refining \u2192 Tazweed</b> \\n \\n Gasoline and diesel power everyday journeys,
+    LPG fuels homes and businesses, jet fuel connects Bahrain to global aviation,
+    keeping industries moving. With cleaner fuels enabled by the BMP, Tazweed ensures
+    reliable energy today while preparing for tomorrow\u2019s mobility solutions."
+  - "<b>Tazweed \u2192 Consumer</b> \\n \\n Through service stations across Bahrain,
+    delivering high-quality fuels alongside partnerships offering retail, dining
+    and lifestyle services. By blending reliable energy with modern amenities and
+    customer care, Tazweed enhances daily journeys and creates destinations that
+    energize Bahrain\u2019s communities."
+  - "<b>Tazweed \u2192 Future Mobility</b> \\n \\n As part of Bapco Energies long
+    term strategic direction, Tazweed is expanding its network under a refreshed
+    brand, and developing new fuel station designs. Bapco Energies is preparing for
+    possible alternative fuels and mobility."
   airfuelingText:
-  - 
-  - 
-  - 
+  - "<b>Refining \u2192 Tazweed</b> \\n \\n From the Refinery, upgraded through the
+    BMP, jet fuel reaches Air Fueling via Tazweed at global standards of safety,
+    quality and performance. Ready to power the aircraft that connect Bahrain to
+    the world."
+  - "<b>Tazweed \u2192 Air Fueling</b> \\n \\n Through Bapco Tazweed, refined products
+    flow seamlessly to airport storage and into Air Fueling\u2019s operations; ensuring
+    uninterrupted supply and flawless service for airlines every day."
+  - "<b>Air Fueling \u2192 Connectivity</b> \\n \\n At Bahrain International Airport,
+    Air Fueling provides the energy that keeps flights moving. By powering aviation,
+    we enable trade, tourism and global connectivity, putting Bahrain at the heart
+    of regional and international travel."
 --- !u!1 &302051336
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,8 +4166,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4991,8 +5025,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6539,15 +6573,15 @@ RectTransform:
   m_GameObject: {fileID: 1413676406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3673999, y: 1.3673999, z: 1.3673999}
+  m_LocalScale: {x: 1.1739812, y: 1.1739812, z: 1.1739812}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082284992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8999252, y: -170.3}
-  m_SizeDelta: {x: 375, y: 173}
+  m_AnchoredPosition: {x: 1.8999252, y: -205.80652}
+  m_SizeDelta: {x: 375, y: 174.2981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413676408
 MonoBehaviour:
@@ -6562,7 +6596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 2100000, guid: f6d46f1e916b3486c90a448a441fac6a, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9292,8 +9326,8 @@ RectTransform:
   - {fileID: 464945170}
   - {fileID: 693745012}
   - {fileID: 1199599703}
-  - {fileID: 1413676407}
   - {fileID: 1269533133}
+  - {fileID: 1413676407}
   - {fileID: 222015228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

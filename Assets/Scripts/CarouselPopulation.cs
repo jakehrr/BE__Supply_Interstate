@@ -47,6 +47,8 @@ public class CarouselPopulation : MonoBehaviour
             go.transform.SetParent(carouselContent.transform);
         }
 
+        GetComponentInChildren<UICarousel>().SetSnapTarget(0);
+
         switch (index)
         {
             case 0:
@@ -95,8 +97,6 @@ public class CarouselPopulation : MonoBehaviour
                 break;
             
         }
-
-        GetComponentInChildren<UICarousel>().SetSnapTarget(0);
 
         firstOpen = true;
     }
