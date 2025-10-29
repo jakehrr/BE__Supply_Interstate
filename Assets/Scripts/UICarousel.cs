@@ -141,7 +141,7 @@ public class UICarousel : MonoBehaviour
         }
     }
 
-    private void InitializeNavigationDots()
+    public void InitializeNavigationDots()
     {
         for (int i = 0; i < totalPages; i++)
         {
@@ -176,7 +176,7 @@ public class UICarousel : MonoBehaviour
         totalPages = Mathf.CeilToInt((float)itemCount / gridLayoutGroup.constraintCount);
     }
 
-    private void SetSnapTarget(int page)
+    public void SetSnapTarget(int page)
     {
         if (infiniteLooping)
         {

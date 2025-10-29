@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1103,7 +1103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &222015228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1140,13 +1140,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarouselPopulation
   index: 3
+  dotContainer: {fileID: 1957984647}
   carouselContent: {fileID: 1971686960}
   carouselText: {fileID: 7328311900540112013, guid: 5492e4c55bba9b5419098ee3f2f7217d, type: 3}
   populatedTextObjects: []
   bapcoEnergiesText: "<b>Bapco Energies \u2192 Supply Chain</b> \\n \\n Bapco Energies
-    operates a portfolio spanning the entire\\n energy value chain. Our portfolio
-    includes wholly-owned subsidiaries\\n and specialized Operating Companies."
-  beVenturesText: 
+    operates a portfolio spanning the entire energy value chain. Our portfolio includes
+    wholly-owned subsidiaries and specialized Operating Companies."
+  beVenturesText: "<b>BeVentures \u2192 Core Ops</b> \\n \\n BeVentures accelerates
+    opportunities across the value chain from Upstream and Gas, to Refining and Distribution,
+    while exploring solar, wind, carbon solutions and pioneering new technologies."
   upstreamText:
   - 
   - 
@@ -1154,7 +1157,7 @@ MonoBehaviour:
   - "<b>Gas \u2192 EWA</b> \\n \\n Supplying EWA with the gas that powers Bahrain\u2019s
     homes and cities."
   - "<b>Gas \u2192 Bahrain\u2019s Industries</b> \\n \\n Fueling the industries that
-    drive Bahrain\u2019s economy\\n, from aluminium and petrochemicals, to manufacturing."
+    drive Bahrain\u2019s economy, from aluminium and petrochemicals, to manufacturing."
   - "<b>Gas \u2192 Refining/BMP</b> \\n \\n Providing the energy that powers advanced
     refining."
   refiningText:
@@ -3509,7 +3512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &693745012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3841,8 +3844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.5, y: 0}
-  m_SizeDelta: {x: 0, y: 318}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_SizeDelta: {x: 8.4999, y: 318}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &832806513
 MonoBehaviour:
@@ -3870,7 +3873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6543,7 +6546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.8999252, y: -219}
+  m_AnchoredPosition: {x: 1.8999252, y: -170.3}
   m_SizeDelta: {x: 375, y: 173}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413676408
@@ -8468,7 +8471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8588,7 +8591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8647,8 +8650,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.00010676083, y: 150}
-  m_SizeDelta: {x: 0, y: 300}
+  m_AnchoredPosition: {x: 0.00031250788, y: 150}
+  m_SizeDelta: {x: -698.8205, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1971686962
 MonoBehaviour:
@@ -9358,6 +9361,7 @@ MonoBehaviour:
   buttonIndex: 0
   textScrollScript: {fileID: 2082284995}
   zoomOutReference: {fileID: 183533503}
+  carousel: {fileID: 222015229}
   anim: {fileID: 2082284994}
   connectionAnim: {fileID: 1924393213}
   beVenturesPulse: {fileID: 2082696434}
@@ -9495,7 +9499,7 @@ MonoBehaviour:
   scrollingTextSet2: {fileID: 83296721}
   mainPanel: {fileID: 693745011}
   expandedPanel: {fileID: 1199599702}
-  scrollingExplore: {fileID: 1269533132}
+  scrollingExplore: {fileID: 222015227}
 --- !u!1 &2082696434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9057225455531938300, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}

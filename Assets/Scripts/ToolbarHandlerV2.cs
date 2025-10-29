@@ -10,6 +10,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [Header("Generic References")]
     [SerializeField] private ExploreTextScroll textScrollScript;
     [SerializeField] private LocationFocus zoomOutReference;
+    [SerializeField] private CarouselPopulation carousel;
     [SerializeField] private Animator anim;
     [SerializeField] private Animator connectionAnim;
     [SerializeField] private GameObject beVenturesPulse;
@@ -76,14 +77,15 @@ public class ToolbarHandlerV2 : MonoBehaviour
         anim.SetBool("ExpandedPanel", false);
         anim.SetBool("ExploreScroll", true);
 
-        scrollingTextSet1.text = scrollingTextParagraph[buttonIndex];
-        scrollingTextSet2.text = scrollingTextParagraph[buttonIndex];
+        //scrollingTextSet1.text = scrollingTextParagraph[buttonIndex];
+        //scrollingTextSet2.text = scrollingTextParagraph[buttonIndex];
+
 
         // We are using this switch case to change the settings variables in the explore text scroll. 
         //ChangeScrollSettings();
-        textScrollScript.enabled = true;
+        //textScrollScript.enabled = true;
 
-        textScrollScript.ResetTextPos();
+        //textScrollScript.ResetTextPos();
 
         StartCoroutine(ScrollingPanelOpenTimer());
     }
@@ -109,6 +111,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
     public void MapFromScroll()
     {
+        carousel.DepopulateExplore();
+
         foreach (GameObject go in allScrollingButtons)
             go.GetComponent<Button>().enabled = false;
 
@@ -120,9 +124,50 @@ public class ToolbarHandlerV2 : MonoBehaviour
         anim.SetBool("MainPanel", true);
         anim.SetBool("ExploreScroll", false);
 
-        textScrollScript.enabled = false;
+        //textScrollScript.enabled = false;
 
         StartCoroutine(MapFromScrollTimer());
+    }
+
+    private void SetExplore()
+    {
+        switch (buttonIndex)
+        {
+            case 0:
+                carousel.PopulateCarousel(buttonIndex, 1);
+
+                break;
+
+            case 1:
+                carousel.PopulateCarousel(buttonIndex, 1);
+
+                break;
+
+            case 2:
+                carousel.PopulateCarousel(buttonIndex, 2);
+
+                break;
+
+            case 3:
+                carousel.PopulateCarousel(buttonIndex, 3);
+
+                break;
+
+            case 4:
+                carousel.PopulateCarousel(buttonIndex, 5);
+
+                break;
+
+            case 5:
+                carousel.PopulateCarousel(buttonIndex, 3);
+
+                break;
+
+            case 6:
+                carousel.PopulateCarousel(buttonIndex, 3);
+
+                break;
+        }
     }
 
    /* private void ChangeScrollSettings()
@@ -306,6 +351,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         expandedPanel.SetActive(false);
         scrollingExplore.SetActive(true);
+
+        SetExplore();
 
         yield return new WaitForSeconds(1f);
         foreach(GameObject go in allScrollingButtons)

@@ -1,12 +1,14 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class CarouselPopulation : MonoBehaviour
 {
-    public int index;
+    private bool firstOpen = false;
 
+    [HideInInspector] public int index;
+
+    [SerializeField] private GameObject dotContainer;
     [SerializeField] private GameObject carouselContent;
     [SerializeField] private GameObject carouselText;
 
@@ -22,20 +24,27 @@ public class CarouselPopulation : MonoBehaviour
 
     private void OnEnable()
     {
-        PopulateCarousel(index, 3); 
+        // PopulateCarousel(index, 3);
+        populatedTextObjects.Clear();
     }
 
     public void PopulateCarousel(int index, int numOfPages)
     {
-        for(int i = 0;  i < numOfPages; i++)
+        Debug.Log(numOfPages);
+        GetComponentInChildren<UICarousel>().totalPages = numOfPages;
+        if(firstOpen)
+         GetComponentInChildren<UICarousel>().InitializeNavigationDots();
+
+        GetComponentInChildren<UICarousel>().currentIndex = 0;
+
+        for (int i = 0;  i < numOfPages; i++)
         {
             populatedTextObjects.Add(Instantiate(carouselText));
         }
 
         foreach (GameObject go in populatedTextObjects)
         {
-            go.transform.parent = carouselContent.transform;
-            go.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 350); 
+            go.transform.SetParent(carouselContent.transform);
         }
 
         switch (index)
@@ -86,5 +95,27 @@ public class CarouselPopulation : MonoBehaviour
                 break;
             
         }
+
+        GetComponentInChildren<UICarousel>().SetSnapTarget(0);
+
+        firstOpen = true;
+    }
+
+    public void DepopulateExplore()
+    {
+        GetComponentInChildren<UICarousel>().totalPages = 0;
+        GetComponentInChildren<UICarousel>().currentIndex = 0;
+
+        foreach (GameObject go in populatedTextObjects)
+        {
+            Destroy(go);
+        }
+
+        for (int i = dotContainer.transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(dotContainer.transform.GetChild(i).gameObject);
+        }
+
+        populatedTextObjects.Clear();
     }
 }
