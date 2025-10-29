@@ -17,7 +17,6 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [SerializeField] private GameObject[] allMainPanelButtons;
     [SerializeField] private GameObject[] allExpandedButtons;
     [SerializeField] private GameObject[] allScrollingButtons;
-    [SerializeField] private GameObject[] expandedPanelLocationLabels;
 
     [Header("UI Change Elements")]
     [SerializeField] private string[] locationNames;
@@ -45,13 +44,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
             go.GetComponent<Button>().enabled = false;
         foreach(GameObject go in worldspaceLocationBoxes)
             go.SetActive(false);
-        foreach (GameObject go in expandedPanelLocationLabels)
-            go.SetActive(false);
 
         worldspaceLocationBoxes[index].SetActive(true);
         buttonIndex = index;
         //namedLocationBox.text = locationNames[index];
-        expandedPanelLocationLabels[buttonIndex].SetActive(true);
         textSet1.text = text1Paragraphs[index];
         textSet2.text = text2Paragraphs[index];
 
