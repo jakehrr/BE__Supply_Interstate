@@ -80,7 +80,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         scrollingTextSet2.text = scrollingTextParagraph[buttonIndex];
 
         // We are using this switch case to change the settings variables in the explore text scroll. 
-        ChangeScrollSettings();
+        //ChangeScrollSettings();
         textScrollScript.enabled = true;
 
         textScrollScript.ResetTextPos();
@@ -125,7 +125,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         StartCoroutine(MapFromScrollTimer());
     }
 
-    private void ChangeScrollSettings()
+   /* private void ChangeScrollSettings()
     {
         switch (buttonIndex)
         {
@@ -235,7 +235,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
                 break;
         }
-    }
+    }*/
 
     private void HandleCameraFromScrollToExpanded()
     {
