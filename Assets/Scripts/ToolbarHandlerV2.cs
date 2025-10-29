@@ -135,7 +135,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
         {
             case 0:
                 carousel.PopulateCarousel(buttonIndex, 1);
-                connectionAnim.SetInteger("ConnectionState", 1);
+                beVenturesPulse.SetActive(true);
                 worldspaceLocationBoxes[0].SetActive(true);
                 worldspaceLocationBoxes[2].SetActive(true);
                 worldspaceLocationBoxes[3].SetActive(true);
@@ -147,7 +147,7 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
             case 1:
                 carousel.PopulateCarousel(buttonIndex, 1);
-                connectionAnim.SetInteger("ConnectionState", 2);
+                beVenturesPulse.SetActive(true);
                 worldspaceLocationBoxes[0].SetActive(true);
                 worldspaceLocationBoxes[2].SetActive(true);
                 worldspaceLocationBoxes[3].SetActive(true);
