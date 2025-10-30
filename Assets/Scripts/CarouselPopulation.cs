@@ -11,6 +11,10 @@ public class CarouselPopulation : MonoBehaviour
     [SerializeField] private GameObject dotContainer;
     [SerializeField] private GameObject carouselContent;
     [SerializeField] private GameObject carouselText;
+    [SerializeField] private GameObject mapButton;
+    [SerializeField] private GameObject mapBlur;
+    [SerializeField] private GameObject paginationButton;
+    [SerializeField] private GameObject paginationBlur;
 
     [SerializeField] private List<GameObject> populatedTextObjects = new List<GameObject>();
 
@@ -36,6 +40,21 @@ public class CarouselPopulation : MonoBehaviour
             GetComponentInChildren<UICarousel>().InitializeNavigationDots();
 
         GetComponentInChildren<UICarousel>().currentIndex = 0;
+
+        if(numOfPages <= 1)
+        {
+            paginationButton.SetActive(false);
+            paginationBlur.SetActive(false);
+            mapButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1021.6f);
+            mapBlur.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, -1021.6f);
+        }
+        else
+        {
+            paginationButton.SetActive(true);
+            paginationBlur.SetActive(true);
+            mapButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-141.09f, -1021.6f);
+            mapBlur.GetComponent<RectTransform>().anchoredPosition = new Vector2(-141.09f, -1021.6f);
+        }
 
         for (int i = 0; i < numOfPages; i++)
         {
