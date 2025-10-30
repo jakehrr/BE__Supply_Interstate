@@ -32,12 +32,12 @@ public class CarouselPopulation : MonoBehaviour
     {
         Debug.Log(numOfPages);
         GetComponentInChildren<UICarousel>().totalPages = numOfPages;
-        if(firstOpen)
-         GetComponentInChildren<UICarousel>().InitializeNavigationDots();
+        if (firstOpen && numOfPages > 1)
+            GetComponentInChildren<UICarousel>().InitializeNavigationDots();
 
         GetComponentInChildren<UICarousel>().currentIndex = 0;
 
-        for (int i = 0;  i < numOfPages; i++)
+        for (int i = 0; i < numOfPages; i++)
         {
             populatedTextObjects.Add(Instantiate(carouselText));
         }

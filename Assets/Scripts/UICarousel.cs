@@ -143,12 +143,15 @@ public class UICarousel : MonoBehaviour
 
     public void InitializeNavigationDots()
     {
-        for (int i = 0; i < totalPages; i++)
+        if(totalPages > 1)
         {
-            GameObject dot = Instantiate(dotPrefab, dotsContainer.transform);
-            SetDotSize(dot, i == currentIndex ? activeDotSize : inactiveDotSize);
-            SetDotColor(dot, i == currentIndex ? activeDotColor : inactiveDotColor);
-            // You may need to position the dots based on your layout preferences
+            for (int i = 0; i < totalPages; i++)
+            {
+                GameObject dot = Instantiate(dotPrefab, dotsContainer.transform);
+                SetDotSize(dot, i == currentIndex ? activeDotSize : inactiveDotSize);
+                SetDotColor(dot, i == currentIndex ? activeDotColor : inactiveDotColor);
+                // You may need to position the dots based on your layout preferences
+            }
         }
     }
 
