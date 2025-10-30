@@ -52,8 +52,8 @@ public class CarouselPopulation : MonoBehaviour
         {
             paginationButton.SetActive(true);
             paginationBlur.SetActive(true);
-            mapButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-141.09f, -1021.6f);
-            mapBlur.GetComponent<RectTransform>().anchoredPosition = new Vector2(-141.09f, -1021.6f);
+            mapButton.GetComponent<RectTransform>().anchoredPosition = new Vector2(-167, -1001.7f);
+            mapBlur.GetComponent<RectTransform>().anchoredPosition = new Vector2(-167, -1001.7f);
         }
 
         for (int i = 0; i < numOfPages; i++)
