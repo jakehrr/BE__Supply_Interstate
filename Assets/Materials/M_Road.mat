@@ -76,6 +76,18 @@ Material:
         m_Texture: {fileID: 2800000, guid: 033608d898f4b9942b9d5c9604b7e75a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_3f6b15e30c1f4f849e5b739cbd18a3a9_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: c8c28ee7c187fb446b208e05bad79fde, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_b39a9d9eacd34924ba94f2f94ee6c786_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 249dc77f78029274ebcb7ba2b4e73f6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_ded7feebfd364eddac8d343559911036_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: b2e5d78e3684bc54bae8841f62dcb48b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -95,9 +107,11 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _Brightness: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _Contrast: 1
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -109,6 +123,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
+    - _Normal_Strength: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -122,6 +137,8 @@ Material:
     - _Surface: 0
     - _Textures: 1
     - _Tiling: 10
+    - _WA_Blend: 1
+    - _WA_Texture: 0
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
