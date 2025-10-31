@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 516690efc55f6fe4c98feee4a5d1ab48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8690403640ed5c4abe9c8123eb7de5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -288,7 +288,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &46468772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   populatedTextObjects: []
   bapcoEnergiesText: "<b>Bapco Energies \u2192 Supply Chain</b> \\n \\n Bapco Energies
     operates a portfolio spanning the entire energy value chain. Our portfolio includes
-    wholly-owned subsidiaries and specialized Operating Companies."
+    wholly-owned subsidiaries and specialized operating companies."
   beVenturesText: "<b>BeVentures \u2192 Core Ops</b> \\n \\n BeVentures accelerates
     opportunities across the value chain from Upstream and Gas, to Refining and Distribution,
     while exploring solar, wind, carbon solutions and pioneering new technologies."
@@ -1182,22 +1182,23 @@ MonoBehaviour:
     connections."
   - "<b>Refining \u2192 BxT Trading</b> \\n \\n Various refined products flow into
     regional and international markets, strengthened by partnerships such as TotalEnergies.
-    Trading expands Bahrain\u2019s global reach and maximises the value of every
+    Trading expands Bahrain\u2019s global reach and maximizes the value of every
     barrel."
-  - "<b>BMP -> ESG</b> \\n \\n The Bapco Modernization Programme has transformed
+  - "<b>BMP \u2192 ESG</b> \\n \\n The Bapco Modernization Programme has transformed
     the Refinery into a world-class facility increasing capacity, elevating product
     quality, reducing energy intensity and enabling cleaner fuels that support Bahrain\u2019s
     growth and sustainability goals."
   tazweedText:
-  - "<b>Refining \u2192 Tazweed</b> \\n \\n Gasoline and diesel power everyday journeys,
-    LPG fuels homes and businesses, jet fuel connects Bahrain to global aviation,
-    keeping industries moving. With cleaner fuels enabled by the BMP, Tazweed ensures
-    reliable energy today while preparing for tomorrow\u2019s mobility solutions."
-  - "<b>Tazweed \u2192 Consumer</b> \\n \\n Through service stations across Bahrain,
-    delivering high-quality fuels alongside partnerships offering retail, dining
-    and lifestyle services. By blending reliable energy with modern amenities and
-    customer care, Tazweed enhances daily journeys and creates destinations that
-    energize Bahrain\u2019s communities."
+  - "<b>Refining \u2192 Tazweed</b> \\n \\n Gasoline and diesel power everyday journeys.
+    LPG fuels homes and businesses. And jet fuel connects Bahrain to global aviation,
+    keeping industries moving. With cleaner fuels enabled by the Bapco Modernization
+    Programme, Tazweed ensures reliable energy today while preparing for tomorrow\u2019s
+    mobility solutions."
+  - "<b>Tazweed \u2192 Consumer</b> \\n \\n Service stations across Bahrain deliver
+    high-quality fuels alongside partnerships offering retail, dining and lifestyle
+    services. By blending reliable energy with modern amenities and customer care,
+    Tazweed enhances daily journeys and creates destinations that energize Bahrain\u2019s
+    communities."
   - "<b>Tazweed \u2192 Future Mobility</b> \\n \\n As part of Bapco Energies long
     term strategic direction, Tazweed is expanding its network under a refreshed
     brand, and developing new fuel station designs. Bapco Energies is preparing for
@@ -1877,7 +1878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &422113359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3519,7 +3520,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dd4c1da3ae33a514cb33f6ee4a34f10d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 358940b2b0ba9c245a28e12750647e57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3669,7 +3670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c417a6f94ce92149a03a5db26586bc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 748267cf49cc913489622dd6ff86d800, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3729,7 +3730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.012573242, y: 379}
+  m_AnchoredPosition: {x: 0.0126953125, y: 379}
   m_SizeDelta: {x: -2480.8, y: 101.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &722581233
@@ -3751,7 +3752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &722581234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4334,7 +4335,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 20
+  m_lineSpacing: 7.5
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -5219,7 +5220,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -6.1922913, w: -38.700806}
+  m_margin: {x: 0, y: 0, z: 7.9903035, w: -38.700806}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5290,7 +5291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4276e652a9280bf42a0101e6ee9db706, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 384ccaafeb6ad914d920857859881c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5644,7 +5645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1127131629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5799,7 +5800,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 022155adac22c8c47b52996ae909d750, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f67215fbe84a3494aa4a08d437f2cec8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6015,7 +6016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1254681735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7098,7 +7099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1549102060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7481,7 +7482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 608259b06af15534db82ca6a28750178, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4bad92ad8e9b41e4384914a753dd5d48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7769,7 +7770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a32de0feec89f749b344927b71a94f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 690e3448cc569a0498d995aea3a0f4bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8459,7 +8460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1949176407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9738,11 +9739,11 @@ MonoBehaviour:
   - Bapco Tazweed
   - Bapco Air Fueling
   text1Paragraphs:
-  - "We are the Kingdom of Bahrain\u2019s integrated energy Company, driving transformation
-    to a brighter, more sustainable and secure energy future. "
-  - BeVentures is the venture & investment arm of Bapco Energies.
-  - "The steward of the Bahrain Field, Bapco Upstream explores, develops and operates
-    the Bahrain Field to optimise production and secure Bahrain\u2019s energy supply."
+  - "We are the Kingdom of Bahrain\u2019s integrated energy company, driving transformation
+    to a brighter, more sustainable and secure energy future."
+  - BeVentures is the venture and investment arm of Bapco Energies.
+  - "Bapco Upstream explores, develops and operates the Bahrain Field to optimize
+    production and secure Bahrain\u2019s energy supply."
   - "Bapco Gas transforms Bahrain\u2019s most vital energy resource into the power
     that lights our cities and drives our industries."
   - "The Bapco Modernization Programme (BMP) is the largest energy investment in
@@ -9750,16 +9751,16 @@ MonoBehaviour:
   - "Powering journeys that connect Bahrain and beyond. Bapco Tazweed is the Kingdom\u2019s
     trusted energy provider delivering fuels, LPG, and aviation fuel that keep Bahrain
     moving."
-  - Delivering world-class aviation fuel services at Bahrain International Airport
+  - Delivering world-class aviation fuel services at Bahrain International Airport.
   text2Paragraphs:
-  - "As a forward-thinking energy Company, we are investing in diversifying the national
-    energy infrastructure to meet future energy demands. By embracing an energy mix
-    with sustainable and renewable sources, the Company aims to ensure energy security
+  - "As a forward-thinking energy company, we are diversifying the national energy
+    infrastructure to meet future energy demands. By embracing an energy mix with
+    sustainable and renewable sources, the company aims to ensure energy security
     and maximize returns on Bahrain\u2019s natural resources responsibly. To power
     the next generation."
   - Investing in transformative technologies and partnerships that support the energy
     transition and sustainable development.
-  - Through advanced well modelling, field development and production optimisation,
+  - Through advanced well modelling, field development and production optimization,
     Bapco Upstream delivers the crude oil and associated gas that feed the downstream
     value chain from in-field gas processing to the Refinery and onward to domestic
     and global markets.
@@ -9769,14 +9770,12 @@ MonoBehaviour:
     including aluminium, petrochemicals and manufacturing."
   - "Through new crude and vacuum distillation, hydrocracking and sulphur treatment
     units, the BMP expands capacity, elevates product quality and improves efficiency,
-    strengthening Bahrain\u2019s refining, trading and export capabilities.  Visual
-    note: Bapco Refining is the nodal \u2018centre\u2019 of the Supply Chain, which
-    is why both inputs and outputs will be visualised in a uniquely ."
+    strengthening Bahrain\u2019s refining, trading and export capabilities."
   - As the downstream distribution arm of Bapco Energies, Bapco Tazweed connects
     refinery products to end users across the Kingdom and beyond. From retail service
     stations to industrial clients and global airlines, we ensure reliable, high-quality
     energy supply and customer service at every level.
-  - "we ensure safe, reliable and high-quality jet A-1 fuel supply for leading global
+  - "We ensure safe, reliable and high-quality jet A-1 fuel supply for leading global
     airlines, local carriers and private aircraft. With products refined and then
     distributed through Bapco Tazweed, Bapco Air Fueling enables seamless operations
     in the Kingdom\u2019s aviation sector, powering connectivity, trade and tourism
@@ -10216,6 +10215,10 @@ PrefabInstance:
     - target: {fileID: 2084704802867145121, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227256376566967592, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3557913715009114061, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_Name
@@ -10680,6 +10683,10 @@ PrefabInstance:
     - target: {fileID: 7603711191444386122, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 47.484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093940550365061952, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185238514641885698, guid: 69f0754ede37e2c41a7f2819d7c1075e, type: 3}
       propertyPath: m_IsActive
