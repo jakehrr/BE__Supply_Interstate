@@ -107,7 +107,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _Brightness: 2.7
+    - _Brightness: 3
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -137,7 +137,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _Textures: 1
-    - _Tiling: 0.5
+    - _Tiling: 2
     - _WA_Blend: 1
     - _WA_Texture: 1
     - _WorkflowMode: 1
