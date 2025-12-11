@@ -571,7 +571,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98581240}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
@@ -1097,6 +1097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 222015228}
   - component: {fileID: 222015229}
+  - component: {fileID: 222015230}
   m_Layer: 5
   m_Name: Explore Carousel
   m_TagString: Untagged
@@ -1116,6 +1117,7 @@ RectTransform:
   m_LocalScale: {x: 0.8189018, y: 0.8189018, z: 0.8189018}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1413676407}
   - {fileID: 98581241}
   - {fileID: 1705981559}
   - {fileID: 1967853908}
@@ -1215,6 +1217,19 @@ MonoBehaviour:
     Air Fueling provides the energy that keeps flights moving. By powering aviation,
     we enable trade, tourism and global connectivity, putting Bahrain at the heart
     of regional and international travel."
+--- !u!114 &222015230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222015227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac3229fa5558fd4fa9e086a4ebe5c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragWindow
+  dragTop: {fileID: 222015228}
 --- !u!1 &266465261
 GameObject:
   m_ObjectHideFlags: 0
@@ -3697,6 +3712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 693745012}
+  - component: {fileID: 693745013}
   m_Layer: 5
   m_Name: Main Panel
   m_TagString: Untagged
@@ -3733,6 +3749,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0126953125, y: 379}
   m_SizeDelta: {x: -2480.8, y: 101.11}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &693745013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693745011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac3229fa5558fd4fa9e086a4ebe5c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragWindow
+  dragTop: {fileID: 693745012}
 --- !u!1 &722581233
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +5856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1199599703}
+  - component: {fileID: 1199599704}
   m_Layer: 5
   m_Name: Expanded Panel
   m_TagString: Untagged
@@ -5861,6 +5891,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1199599704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199599702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac3229fa5558fd4fa9e086a4ebe5c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragWindow
+  dragTop: {fileID: 1199599703}
 --- !u!1 &1227619819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6732,14 +6775,14 @@ RectTransform:
   m_GameObject: {fileID: 1413676406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1739812, y: 1.1739812, z: 1.1739812}
+  m_LocalScale: {x: 1.4336044, y: 1.4336044, z: 1.4336044}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2082284992}
+  m_Father: {fileID: 222015228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.606901, y: -574.77856}
+  m_AnchoredPosition: {x: -9.222411, y: -524.82306}
   m_SizeDelta: {x: 1106.3469, y: 509.7312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413676408
@@ -9636,7 +9679,6 @@ RectTransform:
   - {fileID: 693745012}
   - {fileID: 1199599703}
   - {fileID: 1269533133}
-  - {fileID: 1413676407}
   - {fileID: 222015228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
