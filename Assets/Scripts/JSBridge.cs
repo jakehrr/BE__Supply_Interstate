@@ -5,6 +5,9 @@ public class JSBridge : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private ToolbarHandlerV2 toolbar;
+    [SerializeField] private LocationFocus locations;
+    [SerializeField] private GameObject explore;
+    [SerializeField] private GameObject expanded;
 
     // Category name -> Toolbar index map
     private Dictionary<string, int> categoryIndexMap = new Dictionary<string, int>()
@@ -48,7 +51,6 @@ public class JSBridge : MonoBehaviour
         if (toolbar == null)
             return;
 
-        // Global = return to main map panel
         if (action == "Global")
         {
             HandleGlobal();
@@ -65,8 +67,21 @@ public class JSBridge : MonoBehaviour
     {
         Debug.Log("[JSBridge] Global navigation requested");
 
-        // Safest "reset" in your project
-        toolbar.MapFromScroll();
+        if(explore.activeInHierarchy)
+        {
+            toolbar.MapFromScroll();
+            locations.MassZoomOut();
+            return;
+        }
+        else if(expanded.activeInHierarchy)
+        {
+            toolbar.ExpandedPanelClose();
+            locations.MassZoomOut();
+        }
+        else
+        {
+            Debug.Log("No active UI");
+        }
     }
 
     private void HandleView(string level, string category)
@@ -79,14 +94,12 @@ public class JSBridge : MonoBehaviour
 
         Debug.Log($"[JSBridge] View request - Level: {level}, Index: {index}");
 
-        // Level 1 = open expanded panel
         if (level == "Level1")
         {
             toolbar.ExtendedPanelOpen(index);
             return;
         }
 
-        // Level 2 = go to explore view
         if (level == "Level2")
         {
             toolbar.buttonIndex = index;
@@ -117,6 +130,18 @@ public class JSBridge : MonoBehaviour
     private void TestViewLevel2BeVentures()
     {
         OnBrowserMessage("View_Level2_BeVentures");
+    }
+
+    [ContextMenu("TEST / View Level1 Upstream")]
+    private void TestViewLevel1Upstream()
+    {
+        OnBrowserMessage("View_Level1_Upstream");
+    }
+
+    [ContextMenu("TEST / View Level2 Upstream")]
+    private void TestViewLevel2Upstream()
+    {
+        OnBrowserMessage("View_Level2_Upstream");
     }
 
     [ContextMenu("TEST / Global")]

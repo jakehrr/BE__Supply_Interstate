@@ -70,6 +70,69 @@ public class LocationFocus : MonoBehaviour
         beVenturesPulse.SetActive(false);
     }
 
+    public void HandleLocationZooming(int index)
+    {
+        switch (index)
+        {
+            case 0:
+                zoomIn = !zoomIn;
+
+                // cameraAnim.SetBool("BapcoEnergies", zoomIn);
+                cameraAnim.SetBool("BeVentures", zoomIn);
+                triggerableAnim.SetBool("Energies", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 1:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BeVentures", zoomIn);
+                triggerableAnim.SetBool("Ventures", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 2:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BapcoUpstream", zoomIn);
+                triggerableAnim.SetBool("Upstream", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 3:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BapcoGas", zoomIn);
+                triggerableAnim.SetBool("Gas", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 4:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BapcoRefining", zoomIn);
+                triggerableAnim.SetBool("Refining", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 5:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BapcoTazweed", zoomIn);
+                triggerableAnim.SetBool("Tazweeds", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+
+            case 6:
+                zoomIn = !zoomIn;
+
+                cameraAnim.SetBool("BapcoAirFueling", zoomIn);
+                triggerableAnim.SetBool("AirFueling", zoomIn);
+                lightAnim.SetBool("ZoomStart", zoomIn);
+                break;
+        }
+    }
+
     public void BapcoEnergiesZoom()
     {
         zoomIn = !zoomIn;

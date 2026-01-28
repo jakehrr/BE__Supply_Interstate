@@ -8514,6 +8514,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JSBridge
   toolbar: {fileID: 2082284996}
+  locations: {fileID: 183533503}
+  explore: {fileID: 222015227}
+  expanded: {fileID: 1199599702}
 --- !u!4 &1930836974
 Transform:
   m_ObjectHideFlags: 0

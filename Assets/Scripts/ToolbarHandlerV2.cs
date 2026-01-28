@@ -52,6 +52,8 @@ public class ToolbarHandlerV2 : MonoBehaviour
         textSet1.text = text1Paragraphs[index];
         textSet2.text = text2Paragraphs[index];
 
+        zoomOutReference.HandleLocationZooming(index);
+
         anim.SetBool("ExpandedPanel", true);
         anim.SetBool("MainPanel", false);
 
