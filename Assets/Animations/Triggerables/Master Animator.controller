@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DonkeysOut (upstream)
-  m_Speed: -1
+  m_Speed: -0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4036175672254857647}
@@ -461,7 +461,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DonkeysIn (upstream)
-  m_Speed: 1
+  m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6440507381798537859}
@@ -969,7 +969,7 @@ AnimatorStateMachine:
     m_Position: {x: 30, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2145123281426645465}
-    m_Position: {x: -60, y: 420, z: 0}
+    m_Position: {x: -70, y: 420, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5154442127454899482}
     m_Position: {x: -250, y: 210, z: 0}
@@ -984,7 +984,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9166617019622657568}
-    m_Position: {x: 120, y: 50, z: 0}
+    m_Position: {x: 230, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4590039044219167261}
     m_Position: {x: -250, y: 160, z: 0}
@@ -993,7 +993,7 @@ AnimatorStateMachine:
     m_Position: {x: -210, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9035510608227952130}
-    m_Position: {x: -150, y: 360, z: 0}
+    m_Position: {x: -170, y: 380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3681411846085914998}
     m_Position: {x: 220, y: 360, z: 0}
@@ -1005,7 +1005,7 @@ AnimatorStateMachine:
     m_Position: {x: 330, y: 110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4394152653624442385}
-    m_Position: {x: 40, y: -10, z: 0}
+    m_Position: {x: 20, y: -30, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
