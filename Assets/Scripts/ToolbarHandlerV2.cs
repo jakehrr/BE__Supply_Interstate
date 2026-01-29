@@ -11,7 +11,6 @@ public class ToolbarHandlerV2 : MonoBehaviour
     [SerializeField] private ExploreTextScroll textScrollScript;
     [SerializeField] private LocationFocus zoomOutReference;
     [SerializeField] private CarouselPopulation carousel;
-    [SerializeField] private Animator anim;
     [SerializeField] private Animator connectionAnim;
     [SerializeField] private GameObject beVenturesPulse;
     [SerializeField] private GameObject[] worldspaceLocationBoxes;
@@ -54,16 +53,11 @@ public class ToolbarHandlerV2 : MonoBehaviour
 
         zoomOutReference.HandleLocationZooming(index);
 
-        anim.SetBool("ExpandedPanel", true);
-        anim.SetBool("MainPanel", false);
-
         StartCoroutine(ExtendedPanelOpenTimer());
     }
 
     public void ExpandedPanelClose()
     {
-        anim.SetBool("ExpandedPanel", false);
-        anim.SetBool("MainPanel", true);
         foreach (GameObject go in worldspaceLocationBoxes)
             go.SetActive(false);
         StartCoroutine(MainPanelOpenTimer());
@@ -75,9 +69,6 @@ public class ToolbarHandlerV2 : MonoBehaviour
             go.GetComponent<Button>().enabled = false;
 
         zoomOutReference.ZoomOutForScroll();
-
-        anim.SetBool("ExpandedPanel", false);
-        anim.SetBool("ExploreScroll", true);
 
         //scrollingTextSet1.text = scrollingTextParagraph[buttonIndex];
         //scrollingTextSet2.text = scrollingTextParagraph[buttonIndex];
@@ -104,8 +95,6 @@ public class ToolbarHandlerV2 : MonoBehaviour
         worldspaceLocationBoxes[buttonIndex].gameObject.SetActive(true);
         HandleCameraFromScrollToExpanded();
         connectionAnim.SetInteger("ConnectionState", 0);
-        anim.SetBool("ExpandedPanel", true);
-        anim.SetBool("ExploreScroll", false);
 
         textScrollScript.enabled = false;
         StartCoroutine(ExpandedPanelFromScrollTimer());
@@ -122,9 +111,6 @@ public class ToolbarHandlerV2 : MonoBehaviour
             go.SetActive(false);
 
         connectionAnim.SetInteger("ConnectionState", 0);
-
-        anim.SetBool("MainPanel", true);
-        anim.SetBool("ExploreScroll", false);
 
         //textScrollScript.enabled = false;
 

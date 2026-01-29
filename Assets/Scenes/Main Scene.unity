@@ -3719,7 +3719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &693745012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9639,7 +9639,6 @@ GameObject:
   - component: {fileID: 2082284990}
   - component: {fileID: 2082284989}
   - component: {fileID: 2082284996}
-  - component: {fileID: 2082284994}
   - component: {fileID: 2082284995}
   m_Layer: 5
   m_Name: Toolbar Handler
@@ -9735,28 +9734,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &2082284994
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2082284988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9b10bf3e89bbef34b99a41f68c9bc9a6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2082284995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9795,7 +9772,6 @@ MonoBehaviour:
   textScrollScript: {fileID: 2082284995}
   zoomOutReference: {fileID: 183533503}
   carousel: {fileID: 222015229}
-  anim: {fileID: 2082284994}
   connectionAnim: {fileID: 1924393213}
   beVenturesPulse: {fileID: 2082696434}
   worldspaceLocationBoxes:
