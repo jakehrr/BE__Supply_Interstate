@@ -360,11 +360,11 @@ public class ToolbarHandlerV2 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         expandedPanel.SetActive(false);
-        mainPanel.SetActive(true);
+        //mainPanel.SetActive(true);
 
         yield return new WaitForSeconds(1f);
-        foreach (GameObject go in allMainPanelButtons)
-            go.GetComponent<Button>().enabled = true;
+       // foreach (GameObject go in allMainPanelButtons)
+          //  go.GetComponent<Button>().enabled = true;
     }
 
     private IEnumerator ScrollingPanelOpenTimer()
@@ -395,10 +395,10 @@ public class ToolbarHandlerV2 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         scrollingExplore.SetActive(false);
-        mainPanel.SetActive(true);
+        //mainPanel.SetActive(true);
 
         yield return new WaitForSeconds(1f);
-        foreach(GameObject go in allMainPanelButtons)
-            go.GetComponent<Button>().enabled = true;
+        //foreach(GameObject go in allMainPanelButtons)
+           // go.GetComponent<Button>().enabled = true;
     }
 }
